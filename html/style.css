@@ -1,0 +1,709 @@
+p              {
+                color:              Black;
+	  	          background-color:   transparent;
+                text-indent:        20px;
+                font-size:          13px;
+                margin:             0px 0px 0px 0px;
+                font-family:        "Lucida Console",sans-serif;
+               }
+/******************************************************************************/
+h1             {
+                color:              Blue;
+       	  	    background-color:   transparent;
+                text-indent:        30px;
+                font-size:          30px;
+                font-family:        "Lucida Console",sans-serif;
+               }
+/******************************************************************************/
+h2             {
+                color:              #0000CD;
+  	  	          background-color:   transparent;
+                font-size:          20px;
+                font-family:        "Lucida Console",sans-serif;
+               }
+/******************************************************************************/
+h3             {
+                color:              #0000CD;
+  	  	          background-color:   transparent;
+                font-size:          16px;
+                font-family:        "Lucida Console",sans-serif;
+					 padding:            0px;
+					 border-width:       0px;
+                margin:             0px 0px 0px 0px;
+					 text-align:         center;
+               }
+/******************************************************************************/
+a              {
+                text-decoration:    none;
+	             font-family:        "Lucida Console",sans-serif;
+	             font-size:          10px;
+               }
+a:link         {
+                color:              black;
+  	       	    background-color:   transparent;
+               }
+a:visited      {
+                color:              black;
+  	       	    background-color:   transparent;
+               }
+a:active       {
+                color:              black;
+       	  	    background-color:   transparent;
+               }
+a:hover        {
+     	          color:              black;
+  	  	          background-color:   ButtonShadow;
+/*	             text-decoration:    underline;                                */
+               }
+/******************************************************************************/
+body           {
+                color:              black;
+                margin-left:        5px;
+                margin-top:         5px;
+                margin-right:       5px;
+                margin-bottom:      5px;
+                font-family:        "Lucida Console",sans-serif;
+                font-size:          10px;
+               }
+/******************************************************************************/
+font           {
+                font-weight:        normal;                      /* bold, 100, 400, 700, 900, násobky 100 od 100 do 900, bolder, lighter */
+                font-variant:       normal;                      /* small-caps */
+                font-style:         normal;                      /* italic, oblique - skloněné písmo (geometricky transformované stojaté písmo)*/
+                font-size:          10px;                        /* jednotky px, pt, mm, in, em, ex, en a procenta, klíčové slovo (např. small)-7 stupnov, smaller, larger*/ 
+                line-height:        normal;                      /* procento, násobek normální výšky, např. line-height: 1.5, */
+                font-family:        "Lucida Console",sans-serif; /* serif-patkové písmo nejčastěji Times New Roman, sans-serif-bezpatkové písmo nejčastěji Arial, cursive-psací písmo, fantasy-divoké volně psané písmo, monospace-jako psací stroj*/
+                text-decoration:    none;                        /* underline, overline, line-through, blink */
+                text-transform:     none;                        /* capitalize-první písmena všech slov budou velká, uppercase, lowercase */
+               }
+/******************************************************************************/
+td             {
+                font-size:          10px; 
+               }
+/******************************************************************************/
+table          {
+                border-collapse:    collapse;
+                table-layout:       fixed;
+                border-color:       black;
+               }
+/******************************************************************************/
+textarea       {
+	             font-family:        "Lucida Console",sans-serif;
+					 font-size:          12px;
+               }
+/******************************************************************************/
+fieldset       {
+					 border-color:       Black;	
+					 border-width:       2px;
+					 border-style:       solid;
+					 padding:            0px;
+					 margin:             0px;
+               }
+/******************************************************************************/
+.med           {
+                font-size:          14px;
+                color:              black;
+      	  	    background-color:   transparent;
+                font-weight:        bold;
+               }
+/******************************************************************************/
+.small         {
+                font-size:          10px;
+                color:              black;
+  	  	          background-color:   transparent;
+                text-decoration:    none;
+               }
+/******************************************************************************/
+.tiny         {
+                font-size:          3px;
+                color:              black;
+  	  	          background-color:   transparent;
+                text-decoration:    none;
+               }
+/******************************************************************************/
+/**                          Pozicovane casti stranky                        **/
+/******************************************************************************/
+.head          {
+	             background-image:    url(pics/site/top_table.jpg);
+                background-repeat:   no-repeat;
+                margin:              0px;
+					 padding:             0px;
+                border-style:        hidden;
+                position:            absolute;
+     			    top:                 0px;
+    	   		 left:                -420px;
+			       width:               840px;
+                height:              240px;
+		      	 overflow:            auto;
+				    z-index:             2;
+               }
+/******************************************************************************/
+.counter       {
+	             position:            absolute;
+					 top:                 1100px;
+					 left:                -400px;
+					 border-style:        hidden;
+					 width:               85px;
+					 height:              15px;
+					 text-align:          center;
+				    vertical-align:      middle;
+               }
+/******************************************************************************/
+/**                                 MENU                                     **/
+/******************************************************************************/
+.submenu {
+	z-index: 1000;
+}
+.menu          {
+                margin:              0px;
+                position:            absolute;
+                border-style:        hidden;
+					 padding:             0px;
+					 width:               685px;
+					 height:              40px;
+					 top:                 240px;
+					 left:                -421px;
+               }
+/******************************************************************************/
+.menu_1        {
+     	          border-style:        none;
+	 			    padding:             0px;
+				    position:            absolute;
+                overflow:            hidden;
+				    margin:              0px;
+				    top:                 0px;
+				    left:                0px;
+				    width:               173px;
+				    height:              40px;
+					 cursor:              pointer;
+               }
+/******************************************************************************/
+.menu_2        {
+     	          border-style:        none;
+	 			    padding:             0px;
+				    position:            absolute;
+                overflow:            hidden;
+				    margin:              0px;
+				    top:                 0px;
+				    left:                173px;
+				    width:               120px;
+				    height:              40px;
+
+               }
+/******************************************************************************/
+.menu_3        {
+     	          border-style:        none;
+	 			    padding:             0px;
+				    position:            absolute;
+                overflow:            hidden;
+				    margin:              0px;
+				    top:                 0px;
+				    left:                292px;
+				    width:               115px;
+				    height:              40px;
+
+               }
+/******************************************************************************/
+.menu_4        {
+     	          border-style:        none;
+	 			    padding:             0px;
+				    position:            absolute;
+                overflow:            hidden;
+				    margin:              0px;
+				    top:                 0px;
+				    left:                407px;
+				    width:               87px;
+				    height:              40px;
+					 cursor:              pointer;
+               }
+/******************************************************************************/
+.menu_5        {
+     	          border-style:        none;
+	 			    padding:             0px;
+				    position:            absolute;
+                overflow:            hidden;
+				    margin:              0px;
+				    top:                 0px;
+				    left:                494px;
+				    width:               98px;
+				    height:              40px;
+
+               }
+/******************************************************************************/
+.menu_6        {
+     	          border-style:        none;
+	 			    padding:             0px;
+				    position:            absolute;
+                overflow:            hidden;
+				    margin:              0px;
+				    top:                 0px;
+				    left:                592px;
+				    width:               91px;
+				    height:              40px;
+					 cursor:              pointer;
+               }
+/******************************************************************************/
+.menu_7        {
+     	          border-style:        none;
+	 			    padding:             0px;
+				    position:            absolute;
+                overflow:            hidden;
+				    margin:              0px;
+				    top:                 0px;
+				    left:                682px;
+				    width:               159px;
+				    height:              40px;
+					 cursor:              pointer;
+               }
+/******************************************************************************/
+#submenu_1     {
+                color:               Black;
+                background-color:    Silver;
+                left:                173px;
+                top:                 40px;
+		 			 height:              33px;
+			 		 position:            absolute;
+                text-align:          left;
+					 margin:              0px;
+                padding:             0px;
+                border-style:        solid;
+					 border-color:        Black;
+					 border-width:        0px;
+                visibility:          hidden;
+               }
+#submenu_1 A   {
+	             font-family:         Arial, Helvetica, sans-serif;
+					 font-size:        	 10px;
+                font-weight:         bold;
+					 text-decoration:     none;
+					 padding:             5px;
+               }
+.submenu_1_div {
+                color:               Black;
+                background-color:    Silver;
+					 border-color:        Black;
+					 border-width:        1px;
+					 border-left-style:   solid;
+ 					 border-right-style:  solid;
+					 border-bottom-style: solid;
+					 border-top-style:    hidden;
+					 text-align:          center;
+					 width:               120px;
+					 cursor:              pointer;
+               }
+					
+#submenu_2     {
+                color:               Black;
+                background-color:    Silver;
+                left:                292px;
+                top:                 40px;
+		 			 height:              33px;
+			 		 position:            absolute;
+                text-align:          left;
+                padding:             0px;
+					 margin:              0px;
+                border-style:        none;
+                visibility:          hidden;
+               }
+#submenu_2 A   {
+	             font-family:         Arial, Helvetica, sans-serif;
+					 font-size:           10px;
+					 text-decoration:     none;
+					 padding:             5px;					 
+               }
+.submenu_2_div {
+                color:               Black;
+                background-color:    Silver;
+					 border-color:        Black;
+					 border-width:        1px;
+					 border-left-style:   solid;
+ 					 border-right-style:  solid;
+					 border-bottom-style: solid;
+					 border-top-style:    hidden;
+					 text-align:          center;
+					 width:               115px;
+					 cursor:              pointer;
+               }
+					
+#submenu_3     {
+                color:               Black;
+                background-color:    Silver;
+                left:                494px;
+                top:                 40px;
+		 			 height:              88px;
+			 		 position:            absolute;
+                text-align:          left;
+                padding:             0px;
+					 margin:              0px;
+                border-style:        none;
+                visibility:          hidden;
+               }
+#submenu_3 A   {
+	             font-family:         Arial, Helvetica, sans-serif;
+					 font-size:           10px;
+					 text-decoration:     none;
+					 padding:             5px;					 
+               }
+.submenu_3_div {
+                color:               Black;
+                background-color:    Silver;
+					 border-color:        Black;
+					 border-width:        1px;
+					 border-left-style:   solid;
+ 					 border-right-style:  solid;
+					 border-bottom-style: solid;
+					 border-top-style:    hidden;
+					 text-align:          center;
+					 width:               125px;
+					 cursor:              pointer;
+               }
+/******************************************************************************/
+.news          {
+                color:               Black;
+                background-color:    #A0A0A0;
+
+					 background-position: -3px;
+                margin:              0px;
+                position:            absolute;
+					 top:                 280px;
+					 left:                -419px;
+					 width:               128px;
+                height:              230px;
+					 overflow:            auto;
+      		    border-top-style:    hidden;
+					 border-bottom-style: dashed;
+					 border-bottom-width: 2px;
+					 border-right-style:  hidden;
+ 				    border-left-style:   hidden;
+               }				
+.news HR       {
+              	 color:               Black;
+                background-color:    Black;
+               }	
+/******************************************************************************/
+.news_head     {
+                position:            absolute;
+					 left:                -420px;
+					 top:                 280px;
+					 width:               113px;
+	             border-style:        hidden;
+					 border-width:        0px;
+					 padding:             0px;
+                font-weight:         bold;
+					 text-align:          center;
+					 color:               Black;
+					 background-color:    #00b3FF;
+                z-index:             2;
+               }
+/******************************************************************************/
+.links         {
+                margin:              0px;
+                position:            absolute;
+					 top:                 520px;
+					 left:                -422px;
+					 width:               128px;
+                height:              590px;
+					 overflow:            auto;
+					 border-right-style:  hidden;
+					 border-left-style:   hidden;
+				    border-width:        0px;
+				    text-align:          center;
+               }
+/******************************************************************************/
+.login         {
+	             border-style:        none;
+					 border-width:        0px;
+					 width:               90px;
+					 top:                 1000px;
+					 left:                -404px;
+					 position:            absolute;
+					 padding:             1px;
+					 height:              60px;
+               }
+/******************************************************************************/
+.stranka       {
+                margin:              0px;
+				    position:            absolute;
+				    overflow:            auto;
+				    top:                 280px;
+  				    left:                -290px;
+				    width:               685px;
+                height:              auto;
+                padding-left:        10px;
+                padding-right:       10px;
+                padding-bottom:      10px;
+                padding-top:         30px;
+				    border-style:        hidden;
+               }
+.stranka HR    {
+              	 color:               Black;
+                background-color:    transparent;
+               }
+/******************************************************************************/
+.forum         {
+                position:            absolute;
+					 width:               710px;
+                top:                 280px;
+					 left:                -290px;
+					 height:              750px;
+
+               }
+/******************************************************************************/
+.forum_head    {
+                color:               Black;
+                background-color:    #00b3E0;
+				    border-width:        1px;
+				    border-style:        solid;
+			       margin:              0px;
+				    position:            absolute;
+				    overflow:            auto;
+                text-align:          center;
+				    top:                 50px;
+		          left:                45px;
+                width:               620px;
+                height:              17px;
+               }			 
+/******************************************************************************/
+.forum_text    {
+                margin:              0px;
+				    padding:             0px;
+				    position:            absolute;
+				    overflow:            auto;
+				    top:                 69px;
+		          left:                45px;
+                width:               620px;
+                height:              450px;
+				    border-width:        1px;
+				    border-top-style:    hidden;
+  				    border-left-style:   solid;
+  				    border-right-style:  solid;
+  				    border-bottom-style: solid;
+               }
+				 
+.forum_text HR {
+                background-color:    transparent;
+    	          color:               Black;
+               }
+/******************************************************************************/
+.forum_msg     {
+	             font-size:           12px;
+               }
+/******************************************************************************/
+.zapisForum    {
+				    position:             absolute;
+	             left:                 -180px;
+				    top:                  320px;
+	             width:                390px;
+				    height:               290px;
+				    text-align:           center;
+				    border-style:         none;
+                border-width:         0px;
+               }
+.zapisForum HR {
+                background-color:    transparent;
+	             color:               Black;
+					 border-spacing:      0px;
+					 border:              none;
+               }
+/******************************************************************************/
+.viewer_ovl    {
+                position:            absolute;
+                top:                 30px;
+					 left:                50px;
+                border-width:        0px;
+					 border-style:        solid;
+				    z-index:             2;
+				   }
+/******************************************************************************/
+.viewer_pic    {
+                position:            relative;
+				 	 top:                 0px;
+					 left:                0px;
+					 height:              99%;
+	             border-color:        Black;
+					 border-style:        dotted;
+					 border-width:        3px;
+					 text-align:          center;
+				    z-index:             1;
+               }
+/******************************************************************************/
+.viewer_numbers{
+					 position:            absolute;
+				 	 
+                left:                90px;
+					 top:                 576px;
+					 border-color:        Black;
+					 border-width:        1px;
+					 border-style:        solid;
+					 text-align:          center;
+				    z-index:             1;
+               }
+/******************************************************************************/
+.admin         {
+	             position:            absolute;
+					 top:                 0px;
+					 left:                280px;
+					 border-style:        none;
+					 border-width:        0px;
+					 padding:             0px;
+					 z-index:             100;
+					 border-style:        solid;
+					 border-color:        Black;
+					 border-width:        0px;
+					 padding:             2px;
+					 width:               160px;
+               }
+/******************************************************************************/
+.admin_msg  {
+		          border-style:        solid;
+					 border-width:        1px;
+					 border-color:        Black;
+					 width:               655px;  
+					 padding:             3px;
+					 font-size:           10px;
+					 top:                 0px;
+    				 left:                5px;
+					 position:            relative;
+               }
+/******************************************************************************/
+.admin_msg_napis {
+					 position:            relative;
+					 top:                 0px;
+					 left:                0px;
+					 background-color:    #708090;
+					 border-width:        0px;
+					 text-align:          center;
+					 padding-right:       5px;
+					 font-size:           11px;
+					 font-weight:         bold;
+               }
+/******************************************************************************/
+.bodycko       {
+                position:            relative;
+                left:                0%;
+					 border-width:        0px;
+					 padding:             0px;
+					 top:                 0px;
+               }
+/******************************************************************************/
+.cursor        {
+	             cursor:              pointer;
+               }
+.cursor:hover  {
+	             background-color:   Gray;
+/*					 text-decoration:    underline;                                */
+               }
+/******************************************************************************/
+.sajtah        {
+					 position:            absolute;
+					 left:                50%;
+					 top:                 0%;
+               }
+/******************************************************************************/
+.clanok        {
+	             border-style:        solid;
+					 border-width:        2px;
+					 border-color:        Black;
+					 width:               655px;  
+					 padding:             10px;
+					 font-size:           12px;
+					 top:                 0px;
+    				 left:                5px;
+					 position:            relative;
+               }
+.clanok_pic     {
+					 position:            absolute;
+	             width:               60px;
+					 left:                10px;
+					 top:                 30px;
+               }
+.clanok_text   {
+					 position:            relative;
+					 padding-top:         3px;
+					 padding-bottom:      2px;
+					 left:                90px;
+					 width:               550px;
+					 text-align:          justify;
+               }
+.clanok_nadpis {
+	             position:            relative;
+					 left:                0px;
+					 top:                 0px;
+					 text-align:          center;
+					 text-transform:      uppercase;
+                font-weight:         bold;
+                font-size:           13px;
+					 background-color:    #708090;
+               }
+.clanok_nadpis a {
+	             font-size:           13px;
+               }
+.clanok_autor  {
+					 position:            relative;
+					 top:                 0px;
+					 left:                0px;
+					 background-color:    #708090;
+					 border-width:        0px;
+					 text-align:          right;
+					 padding-right:       5px;
+					 font-size:           10px;
+               }
+.clanok_date   {
+	             position:            absolute;
+					 top:                 12px;
+					 left:                15px;
+					 font-size:           10px;
+					 z-index:             5;
+               }
+/******************************************************************************/
+.obrazok       {
+	             position:            relative;
+                height:              150px;
+               }
+.obrazok_1     {
+	             position:            absolute;
+					 width:               340px;
+					 height:              140px;
+					 background-color:    ThreedFace;
+					 
+               }
+.obrazok_2     {
+	             position:            absolute;
+					 width:               340px;
+					 height:              140px;
+					 background-color:    ThreedFace;
+					 left:                352px;
+               }
+.obrazok_popis {
+	             position:            absolute;
+					 top:                 20px;
+					 left:                155px;
+               }
+.obrazok_pic    {
+	             position:            absolute;
+					 top:                 20px;
+					 left:                10px;
+               }
+.obrazok_nazov {
+	             position:            absolute;
+					 top:                 5px;
+					 left:                10px;
+               }
+.obrazok_zorad {
+	             border-style:        none;
+					 background-color:    ButtonShadow;
+                height:              35px;
+					 width:               120px;
+					 font-size:           10px;
+					 padding:             1px;
+					 text-align:          center;
+					 border-width:        0px;
+               }
+.obrazok_zorad SELECT {
+                font-size:           10px;
+               }
+.obrazok_zorad INPUT{
+	             size:                1px;
+					 font-size:           12px;
+               }
+/******************************************************************************/

@@ -1,5 +1,4 @@
 <?
-
  error_reporting(E_ALL & ~E_WARNING);
 
  //Pocty sprav zobrazovanych na jednu stranku

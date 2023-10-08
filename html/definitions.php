@@ -1,5 +1,7 @@
 <?
 
+ error_reporting(E_ALL & ~E_WARNING);
+
  //Pocty sprav zobrazovanych na jednu stranku
  define ("COUNTER_POCET_ZOBRAZOVANYCH"       ,20);
  define ("CLANKY_POCET_ZOBRAZOVANYCH"        ,5 );

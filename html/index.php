@@ -10,7 +10,7 @@
  </HEAD>
  <BODY ONLOAD="window.location.href='site.php'">
    <P ALIGN="center"><B>counting...</B></P>
-   <?
+   <?php
 
      include_once("definitions.php");
      counterWrite();

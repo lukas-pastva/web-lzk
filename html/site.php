@@ -1,4 +1,4 @@
-<?
+<?php
   //session_register('meno_uzivatela');
   //session_register('stav');
 include_once("definitions.php");
@@ -35,7 +35,7 @@ include_once("definitions.php");
 
 <DIV CLASS="head">
 </DIV>
-<?
+<?php
 
 $x = $_GET["x"];
 
@@ -78,7 +78,7 @@ $x = $_GET["x"];
 ?>
 
 <DIV CLASS="counter">
-  <?
+  <?php
    echo "user nr. ";
    $filename = "txt/index.txt";
    counterRead();
@@ -89,7 +89,7 @@ $x = $_GET["x"];
 <DIV CLASS="news_head">BLESKOVKY</DIV> 
 
 <DIV CLASS="news">
-  <?
+  <?php
     vypisNews();
   ?>
 </DIV>
@@ -215,7 +215,7 @@ $x = $_GET["x"];
 </DIV>
 
 
-<?PHP
+<?php
 
 require($hodn1.".php");
   f($hodn2);

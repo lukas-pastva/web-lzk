@@ -25,3 +25,6 @@ RUN curl -s -o /tmp/go-pear.phar http://pear.php.net/go-pear.phar && \
 USER www-data
 
 COPY ./html /var/www/html
+
+# Convert short open tags to full tags inside the container (PHP 8 removes short_open_tag ini option)
+RUN find /var/www/html -type f -name '*.php' -print0 | xargs -0 sed -i -E 's/<\?(?!(php|=))/<?php /g'

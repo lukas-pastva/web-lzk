@@ -1,5 +1,6 @@
-<?
- error_reporting(E_ALL & ~E_WARNING);
+<?php
+ // Reduce noisy output on legacy code paths
+ error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE & ~E_DEPRECATED);
 
  //Pocty sprav zobrazovanych na jednu stranku
  define ("COUNTER_POCET_ZOBRAZOVANYCH"       ,20);

@@ -30,7 +30,7 @@ include_once("definitions.php");
   <LINK REL="shortcut icon" HREF="pics/site/favicon.gif">
   <TITLE>-->Ludia Z Konca<--</TITLE>
  </HEAD>
-<BODY>
+<BODY<?php echo (isset($x) && $x == 30 ? ' class="forum-fullscreen"' : ''); ?>>
 <DIV CLASS="sajtah">
 
 <DIV CLASS="head">

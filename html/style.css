@@ -488,6 +488,56 @@ fieldset       {
 .forum_msg     {
 	             font-size:           12px;
                }
+/*
+  Fullscreen forum overrides: make forum occupy the entire viewport
+  and hide all scrollbars in the forum view.
+*/
+body.forum-fullscreen {
+  overflow: hidden;
+}
+/* Hide scrollbars in body for WebKit-based browsers */
+body.forum-fullscreen::-webkit-scrollbar {
+  display: none;
+}
+
+.forum--fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}
+
+.forum--fullscreen .forum_head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 48px;
+  margin: 0;
+  border-width: 0;
+  overflow: hidden;
+}
+
+.forum--fullscreen .forum_text {
+  position: fixed;
+  top: 48px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 48px);
+  margin: 0;
+  border-width: 0;
+  overflow: hidden;
+  /* Hide scrollbars for various engines if any overflow occurs */
+  -ms-overflow-style: none;     /* IE and Edge */
+  scrollbar-width: none;        /* Firefox */
+}
+.forum--fullscreen .forum_text::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
 /******************************************************************************/
 .zapisForum    {
 				    position:             absolute;

@@ -1,4 +1,4 @@
-<?
+<?php
   session_register('meno_uzivatela');
   session_register('stav');
   include_once("definitions.php");
@@ -16,7 +16,7 @@
   <TITLE>VLOZIT CLANOK:</TITLE>
  </HEAD>
 <BODY>
-<?
+<?php
 
 // -------------------------------------------------------------------------- //  
   if ( ( $_SESSION['typ_uzivatela'] == "admin" ) || ( $_SESSION['typ_uzivatela'] == "moderator" )  ) {
@@ -29,30 +29,30 @@
 <TABLE BORDER="1" ALIGN="center" BORDERCOLOR="black">
  <FORM ACTION="admin_clanky_insert.php" ENCTYPE="multipart/form-data" METHOD="post">
    <TR><TD ALIGN="center"><P><B>VLOZIT CLANOK</B></P></TD></TR>
-   <TR><TD ALIGN="center"><B>NADPIS CLANKU:</B><BR><INPUT TYPE="text" NAME="nadpis" SIZE="65" MAXLENGTH="128" VALUE="<? echo $_POST['nadpis']; ?>"></TD></TR>
+   <TR><TD ALIGN="center"><B>NADPIS CLANKU:</B><BR><INPUT TYPE="text" NAME="nadpis" SIZE="65" MAXLENGTH="128" VALUE="<?php echo $_POST['nadpis']; ?>"></TD></TR>
 
-   <TR><TD ALIGN="center"><B>AUTOR:</B><BR><INPUT TYPE="<?
+   <TR><TD ALIGN="center"><B>AUTOR:</B><BR><INPUT TYPE="<?php
    
      if ( $_SESSION['typ_uzivatela'] == "admin" ) { echo "text"; }
      if ( $_SESSION['typ_uzivatela'] == "moderator" ) { echo "hidden"; }
    
-   ?>" NAME="author" SIZE="65" MAXLENGTH="128" VALUE="<?
+   ?>" NAME="author" SIZE="65" MAXLENGTH="128" VALUE="<?php
    
     if ( isset($_POST['author'] )){ echo $_POST['author'];  } 
     else { echo $_SESSION['meno_uzivatela']; }
     
-    ?>"><? if ( $_SESSION['typ_uzivatela'] == "moderator" ) { echo $_SESSION['meno_uzivatela']; } ?></TD></TR>
+    ?>"><?php if ( $_SESSION['typ_uzivatela'] == "moderator" ) { echo $_SESSION['meno_uzivatela']; } ?></TD></TR>
 
-   <TR><TD ALIGN="center"><B>DATUM (DD-MM-RRRR):</B><BR><INPUT TYPE="text" NAME="date" SIZE="65" MAXLENGTH="64" VALUE="<? echo $_POST['date']; ?>"></TD></TR>
+   <TR><TD ALIGN="center"><B>DATUM (DD-MM-RRRR):</B><BR><INPUT TYPE="text" NAME="date" SIZE="65" MAXLENGTH="64" VALUE="<?php echo $_POST['date']; ?>"></TD></TR>
    <TR><TD ALIGN="center"><B>OBRAZOK</B>:<BR><INPUT TYPE="file" NAME="pic" SIZE="50"></TD></TR>
-   <TR><TD ALIGN="center"><B>PRECITANE:</B><BR><INPUT TYPE="text" NAME="precitane" SIZE="65" VALUE="<? echo $_POST['precitane']; ?>"></TD></TR>
-   <TR><TD ALIGN="center"><B>TEXT HLAVICKA: </B>(aspom 4 riadky)<BR><TEXTAREA NAME="text_small" COLS="77" ROWS="4"><? echo $_POST['text_small']; ?></TEXTAREA></TD></TR>
-   <TR><TD ALIGN="center"><B>HLAVNY TEXT:</B><BR><TEXTAREA NAME="text_big" COLS="77" ROWS="15"><? echo $_POST['text_big']; ?></TEXTAREA></TD></TR>
+   <TR><TD ALIGN="center"><B>PRECITANE:</B><BR><INPUT TYPE="text" NAME="precitane" SIZE="65" VALUE="<?php echo $_POST['precitane']; ?>"></TD></TR>
+   <TR><TD ALIGN="center"><B>TEXT HLAVICKA: </B>(aspom 4 riadky)<BR><TEXTAREA NAME="text_small" COLS="77" ROWS="4"><?php echo $_POST['text_small']; ?></TEXTAREA></TD></TR>
+   <TR><TD ALIGN="center"><B>HLAVNY TEXT:</B><BR><TEXTAREA NAME="text_big" COLS="77" ROWS="15"><?php echo $_POST['text_big']; ?></TEXTAREA></TD></TR>
    <TR><TD ALIGN="center"><INPUT TYPE="hidden" NAME="sended" VALUE="yes"><INPUT TYPE="submit" VALUE="Vlozit Clanok"></TD>
  </FORM>
 </TABLE>
 
-<?
+<?php
   }
   
   //Ak sa posielal formular
@@ -61,15 +61,15 @@
     function sendBack(){
       ?>
        <FORM ACTION="admin_clanky_insert.php?x=1" METHOD="post">
-        <INPUT TYPE="hidden" NAME="nadpis"     VALUE="<? echo toSingleAp($_POST['nadpis']);     ?>">
-        <INPUT TYPE="hidden" NAME="author"     VALUE="<? echo toSingleAp($_POST['author']);     ?>">
-        <INPUT TYPE="hidden" NAME="date"       VALUE="<? echo toSingleAp($_POST['date']);       ?>">
-        <INPUT TYPE="hidden" NAME="precitane"  VALUE="<? echo toSingleAp($_POST['precitane']);  ?>">
-        <INPUT TYPE="hidden" NAME="text_small" VALUE="<? echo toSingleAp($_POST['text_small']); ?>">
-        <INPUT TYPE="hidden" NAME="text_big"   VALUE="<? echo toSingleAp($_POST['text_big']);   ?>">
+        <INPUT TYPE="hidden" NAME="nadpis"     VALUE="<?php echo toSingleAp($_POST['nadpis']);     ?>">
+        <INPUT TYPE="hidden" NAME="author"     VALUE="<?php echo toSingleAp($_POST['author']);     ?>">
+        <INPUT TYPE="hidden" NAME="date"       VALUE="<?php echo toSingleAp($_POST['date']);       ?>">
+        <INPUT TYPE="hidden" NAME="precitane"  VALUE="<?php echo toSingleAp($_POST['precitane']);  ?>">
+        <INPUT TYPE="hidden" NAME="text_small" VALUE="<?php echo toSingleAp($_POST['text_small']); ?>">
+        <INPUT TYPE="hidden" NAME="text_big"   VALUE="<?php echo toSingleAp($_POST['text_big']);   ?>">
         <INPUT TYPE="submit" VALUE="Naspet"><BR><BR>
        </FORM>
-      <?
+      <?php
     }
 
     if ( ! $_POST['nadpis'] ){
@@ -210,7 +210,7 @@
 
    <DIV CLASS="cursor" ONCLICK="window.close();"><B><CENTER>ZATVORIT OKNO</CENTER></B></DIV>
 
-<?
+<?php
 // -------------------------------------------------------------------------- //
   } else { echo "Na tuto stranku nemate opravneny pristup"; }
 // -------------------------------------------------------------------------- //

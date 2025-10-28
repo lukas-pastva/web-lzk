@@ -1,6 +1,6 @@
 <DIV CLASS="stranka">
 <CENTER>
-<? 
+<?php 
   function f($dir){}
   
   $nick = $_POST["nick"];

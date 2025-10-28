@@ -14,7 +14,7 @@ body {
 <BODY>
 
 
-  <?
+  <?php
 $sub_class = $_GET["sub_class"];
 $order_by = $_GET["order_by"];
 $id = $_GET["id"];
@@ -37,7 +37,7 @@ include_once ("definitions.php");
 ?>
 
   <TABLE ALIGN="center" BORDER="1">
-   <?
+   <?php
 
 $all_text = psw_mysql_query("SELECT * FROM pictures WHERE id = '" . $id . "' ");
 
@@ -46,19 +46,19 @@ if ($all_text->num_rows > 0) {
 
         ?>
    <TR>
-			<TD ALIGN="center"><B><? echo $vytiahnutie["author"];  ?></B><BR>
-     <? echo $vytiahnutie["description"];  ?>
+			<TD ALIGN="center"><B><?php echo $vytiahnutie["author"];  ?></B><BR>
+     <?php echo $vytiahnutie["description"];  ?>
     </TD>
 		</TR>
 		<TR>
 			<TD ALIGN="center"><IMG
-				SRC="<? echo $vytiahnutie["destination"].$vytiahnutie["name"]; ?>"
-				BORDER="0" ALT="<? echo $vytiahnutie["author"]; ?>"
-				TITLE="<? echo $vytiahnutie["author"]; ?>"></TD>
+				SRC="<?php echo $vytiahnutie["destination"].$vytiahnutie["name"]; ?>"
+				BORDER="0" ALT="<?php echo $vytiahnutie["author"]; ?>"
+				TITLE="<?php echo $vytiahnutie["author"]; ?>"></TD>
 		</TR>
 		<TR>
 			<TD ALIGN="center">
-     <?
+     <?php
     }
 }
 
@@ -85,7 +85,7 @@ if ($all_text->num_rows > 0) {
 
 	<DIV CLASS="viewer_ovl">
 
-    <?
+    <?php
 
     $previous = null;
     $actual;
@@ -118,4 +118,3 @@ if ($all_text->num_rows > 0) {
 
 </BODY>
 </HTML>
-

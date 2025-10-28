@@ -1,4 +1,4 @@
-<?
+<?php 
   session_register('meno_uzivatela');
   session_register('stav');
 ?>
@@ -16,7 +16,7 @@
  </HEAD>
 <BODY>
 
-<?
+<?php 
 
 // -------------------------------------------------------------------------- //  
   if ( ( $_SESSION['typ_uzivatela'] == "admin" ) || ( $_SESSION['typ_uzivatela'] == "moderator" )  ) {
@@ -35,16 +35,16 @@
 </CENTER>
 <CENTER>
  <FORM ACTION="admin_forum_update.php" METHOD="post">
-   <INPUT TYPE="hidden" NAME="id" VALUE="<? echo $updatovany_text['id']; ?>">
-  <!-- DATUM:<BR><INPUT TYPE="text" NAME="time" ID="time" VALUE="<? //echo date('j.n.Y G:i:s', ($updatovany_text['time'])); ?>"><BR>&nbsp;<BR>-->
-   NICK:<BR><INPUT TYPE="text" NAME="nick" ID="nick" VALUE="<? echo $updatovany_text['nick']; ?>"><BR>&nbsp;<BR>
-   IP:<BR><INPUT TYPE="text" NAME="ip" ID="ip" VALUE="<? echo $updatovany_text['ip']; ?>"><BR>&nbsp;<BR>
-   TEXT:<BR><TEXTAREA NAME="text" COLS="30" ROWS="10"><? echo $updatovany_text['text']; ?></TEXTAREA><BR>&nbsp;<BR>
+   <INPUT TYPE="hidden" NAME="id" VALUE="<?php  echo $updatovany_text['id']; ?>">
+  <!-- DATUM:<BR><INPUT TYPE="text" NAME="time" ID="time" VALUE="<?php  //echo date('j.n.Y G:i:s', ($updatovany_text['time'])); ?>"><BR>&nbsp;<BR>-->
+   NICK:<BR><INPUT TYPE="text" NAME="nick" ID="nick" VALUE="<?php  echo $updatovany_text['nick']; ?>"><BR>&nbsp;<BR>
+   IP:<BR><INPUT TYPE="text" NAME="ip" ID="ip" VALUE="<?php  echo $updatovany_text['ip']; ?>"><BR>&nbsp;<BR>
+   TEXT:<BR><TEXTAREA NAME="text" COLS="30" ROWS="10"><?php  echo $updatovany_text['text']; ?></TEXTAREA><BR>&nbsp;<BR>
    <INPUT TYPE="submit">
  </FORM>
 </CENTER>
 
-<?
+<?php 
    }
    $id = $_POST["id"];
    $id = strip_tags($id,'');

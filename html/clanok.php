@@ -8,31 +8,31 @@
 <DIV CLASS="stranka">
 	<DIV CLASS="clanok">
 		<DIV CLASS="clanok_date">
-		<? echo date('d.m.Y', ($sprava['date']))."\n" ?>
+		<?php echo date('d.m.Y', ($sprava['date']))."\n" ?>
 		</DIV>
 		<DIV CLASS="clanok_nadpis">
-		<? echo $sprava['nadpis']."\n" ?>
+		<?php echo $sprava['nadpis']."\n" ?>
 		</DIV>
 		<DIV CLASS="clanok_text">
-		<? echo $sprava['text_big']."\n" ?>
+		<?php echo $sprava['text_big']."\n" ?>
 		</DIV>
 		<DIV CLASS="clanok_autor">
-		<? echo $sprava['autor']."\n" ?>
+		<?php echo $sprava['autor']."\n" ?>
 		</DIV>
 		<DIV CLASS="clanok_pic">
-		<?
+		<?php
 		$obr = "/tmp/obr".$sprava['id'].".tmp";
 
 		$handle = fopen($obr, "w");
 		if(! fwrite($handle, $sprava['pic'] ) ){echo "Chyba tvorby obrazka!";}
 		fclose($handle);
 		?>
-			<IMG SRC="tmp/<? echo "obr".$sprava['id'].".tmp";?>" ALT="&nbsp;&nbsp;&nbsp;LZK" BORDER="0"><BR>
+			<IMG SRC="tmp/<?php echo "obr".$sprava['id'].".tmp";?>" ALT="&nbsp;&nbsp;&nbsp;LZK" BORDER="0"><BR>
 		</DIV>
 	</DIV>
 	<BR>
 </DIV>
-		<?
+		<?php
 
 		
 		

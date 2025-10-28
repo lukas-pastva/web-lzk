@@ -1,4 +1,4 @@
-<?
+<?php
   function f ($x){
   ?>
       
@@ -7,7 +7,7 @@
       <H2>Graffiti jam v ?iline</H2><BR>
     	<P>Graffiti jam v ?iline.</P><BR>
 
-     <? 
+     <?php 
        //*****************************//
          $sub_class = "jamza";
             $odkaz = "44";
@@ -16,7 +16,7 @@
      ?>
 
     </DIV>
-    <?
+    <?php
     }
 
 ?>

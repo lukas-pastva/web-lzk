@@ -15,7 +15,7 @@
  </HEAD>
 <BODY>
 DB:
-<?
+<?php
 
 include_once ("definitions.php");
 $connId = mysqli_connect(SQL_HOST, SQL_USERNAME, SQL_PASSWORD, SQL_DBNAME);
@@ -192,4 +192,3 @@ or die("Error: " .mysql_error());
 </BODY>
 
 </HTML>
-

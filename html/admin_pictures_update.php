@@ -1,4 +1,4 @@
-<?
+<?php
   session_register('meno_uzivatela');
   session_register('stav');
   include_once ("definitions.php");
@@ -16,7 +16,7 @@
   <TITLE>VLOZIT CLANOK:</TITLE>
  </HEAD>
 <BODY>
-<?
+<?php 
 
 // -------------------------------------------------------------------------- //  
   if ( ( $_SESSION['typ_uzivatela'] == "admin" ) || ( $_SESSION['typ_uzivatela'] == "moderator" )  ) {
@@ -45,45 +45,45 @@
            <SELECT NAME="sub_class" SIZE="1">
              <OPTION VALUE="">
             <OPTGROUP LABEL="Hip-Hop">
-             <OPTION <? if($vytiahnutie['sub_class'] == "write" ) echo "SELECTED"; ?> VALUE="write">Write
-             <OPTION <? if($vytiahnutie['sub_class'] == "sketches" ) echo "SELECTED"; ?> VALUE="sketches">Scketches
-             <OPTION <? if($vytiahnutie['sub_class'] == "stickers" ) echo "SELECTED"; ?> VALUE="stickers">Stickers
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "write" ) echo "SELECTED"; ?> VALUE="write">Write
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "sketches" ) echo "SELECTED"; ?> VALUE="sketches">Scketches
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "stickers" ) echo "SELECTED"; ?> VALUE="stickers">Stickers
             </OPTGROUP>
             <OPTGROUP LABEL="Ex-sports">
-             <OPTION <? if($vytiahnutie['sub_class'] == "sk8" ) echo "SELECTED"; ?> VALUE="sk8">SK8
-             <OPTION <? if($vytiahnutie['sub_class'] == "bike" ) echo "SELECTED"; ?> VALUE="bike">Bike
-             <OPTION <? if($vytiahnutie['sub_class'] == "snb" ) echo "SELECTED"; ?> VALUE="snb">SNB
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "sk8" ) echo "SELECTED"; ?> VALUE="sk8">SK8
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "bike" ) echo "SELECTED"; ?> VALUE="bike">Bike
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "snb" ) echo "SELECTED"; ?> VALUE="snb">SNB
             </OPTGROUP>
             <OPTGROUP LABEL="Parties">
-             <OPTION <? if($vytiahnutie['sub_class'] == "hip-hop_fest" ) echo "SELECTED"; ?> VALUE="hip-hop_fest">Hip-Hop Fest
-             <OPTION <? if($vytiahnutie['sub_class'] == "dasemolina-theend" ) echo "SELECTED"; ?> VALUE="dasemolina-theend">Da Semolina End
-             <OPTION <? if($vytiahnutie['sub_class'] == "dasemolinaxi" ) echo "SELECTED"; ?> VALUE="dasemolinaxi">Da Semolinaxi
-             <OPTION <? if($vytiahnutie['sub_class'] == "hip-hopsummit1" ) echo "SELECTED"; ?> VALUE="hip-hopsummit1">Hip-Hop Summit 1
-             <OPTION <? if($vytiahnutie['sub_class'] == "hip-hopsummit3" ) echo "SELECTED"; ?> VALUE="hip-hopsummit3">Hip-Hop Summit 3
-             <OPTION <? if($vytiahnutie['sub_class'] == "jamza" ) echo "SELECTED"; ?> VALUE="jamza">Jam ZA
-             <OPTION <? if($vytiahnutie['sub_class'] == "martin" ) echo "SELECTED"; ?> VALUE="martin">Martin
-             <OPTION <? if($vytiahnutie['sub_class'] == "notakdavaj3" ) echo "SELECTED"; ?> VALUE="notakdavaj3">No Tak Davaj 3
-             <OPTION <? if($vytiahnutie['sub_class'] == "ca2" ) echo "SELECTED"; ?> VALUE="ca2">CA uderground 2
-             <OPTION <? if($vytiahnutie['sub_class'] == "ca4" ) echo "SELECTED"; ?> VALUE="ca4">CA uderground 4
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "hip-hop_fest" ) echo "SELECTED"; ?> VALUE="hip-hop_fest">Hip-Hop Fest
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "dasemolina-theend" ) echo "SELECTED"; ?> VALUE="dasemolina-theend">Da Semolina End
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "dasemolinaxi" ) echo "SELECTED"; ?> VALUE="dasemolinaxi">Da Semolinaxi
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "hip-hopsummit1" ) echo "SELECTED"; ?> VALUE="hip-hopsummit1">Hip-Hop Summit 1
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "hip-hopsummit3" ) echo "SELECTED"; ?> VALUE="hip-hopsummit3">Hip-Hop Summit 3
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "jamza" ) echo "SELECTED"; ?> VALUE="jamza">Jam ZA
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "martin" ) echo "SELECTED"; ?> VALUE="martin">Martin
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "notakdavaj3" ) echo "SELECTED"; ?> VALUE="notakdavaj3">No Tak Davaj 3
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "ca2" ) echo "SELECTED"; ?> VALUE="ca2">CA uderground 2
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "ca4" ) echo "SELECTED"; ?> VALUE="ca4">CA uderground 4
             </OPTGROUP>
             <OPTGROUP LABEL="Haluze">
-             <OPTION <? if($vytiahnutie['sub_class'] == "haluze" ) echo "SELECTED"; ?> VALUE="haluze">Haluze
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "haluze" ) echo "SELECTED"; ?> VALUE="haluze">Haluze
             </OPTGROUP>
             <OPTGROUP LABEL="Kooperacia">
-             <OPTION <? if($vytiahnutie['sub_class'] == "xtm" )    echo "SELECTED"; ?> VALUE="xtm">XTM crew
+             <OPTION <?php  if($vytiahnutie['sub_class'] == "xtm" )    echo "SELECTED"; ?> VALUE="xtm">XTM crew
             </OPTGROUP>
            </SELECT>
           </TD>
          </TR>
-         <TR ALIGN="center"><TD>MENO OBRAZKU:<BR><INPUT TYPE="text" NAME="author" SIZE="35" MAXLENGTH="128" VALUE="<? echo $vytiahnutie['author'] ?>"></TD></TR>
-         <TR ALIGN="center"><TD>DATUM (DD-MM-RRRR):<BR><INPUT TYPE="text" NAME="date" SIZE="35" MAXLENGTH="64" VALUE="<? echo date('d-m-Y', ($vytiahnutie['date'])); ?>"></TD></TR>
-         <TR ALIGN="center"><TD>POPIS OBRAZKU:<BR><TEXTAREA NAME="description" COLS="31" ROWS="5"><? echo $vytiahnutie['description'] ?></TEXTAREA>
-         <INPUT TYPE="hidden" NAME="id" VALUE="<? echo $id; ?>">
+         <TR ALIGN="center"><TD>MENO OBRAZKU:<BR><INPUT TYPE="text" NAME="author" SIZE="35" MAXLENGTH="128" VALUE="<?php  echo $vytiahnutie['author'] ?>"></TD></TR>
+         <TR ALIGN="center"><TD>DATUM (DD-MM-RRRR):<BR><INPUT TYPE="text" NAME="date" SIZE="35" MAXLENGTH="64" VALUE="<?php  echo date('d-m-Y', ($vytiahnutie['date'])); ?>"></TD></TR>
+         <TR ALIGN="center"><TD>POPIS OBRAZKU:<BR><TEXTAREA NAME="description" COLS="31" ROWS="5"><?php  echo $vytiahnutie['description'] ?></TEXTAREA>
+         <INPUT TYPE="hidden" NAME="id" VALUE="<?php  echo $id; ?>">
          <TR ALIGN="center"><TD><INPUT TYPE="submit" VALUE="Upravit obrazok"></TD></TR>
         </TABLE>
        </CENTER>
       </FORM>
-      <?
+      <?php 
     }
   }
   
@@ -100,45 +100,45 @@
           <SELECT NAME="sub_class" SIZE="1">
             <OPTION VALUE="">
            <OPTGROUP LABEL="Hip-Hop">
-            <OPTION <? if($_POST['sub_class'] == "write" )    echo "SELECTED"; ?> VALUE="write">Write
-            <OPTION <? if($_POST['sub_class'] == "sketches" ) echo "SELECTED"; ?> VALUE="sketches">Scketches
-            <OPTION <? if($_POST['sub_class'] == "stickers" ) echo "SELECTED"; ?> VALUE="stickers">Stickers
+            <OPTION <?php  if($_POST['sub_class'] == "write" )    echo "SELECTED"; ?> VALUE="write">Write
+            <OPTION <?php  if($_POST['sub_class'] == "sketches" ) echo "SELECTED"; ?> VALUE="sketches">Scketches
+            <OPTION <?php  if($_POST['sub_class'] == "stickers" ) echo "SELECTED"; ?> VALUE="stickers">Stickers
            </OPTGROUP>
            <OPTGROUP LABEL="Ex-sports">
-            <OPTION <? if($_POST['sub_class'] == "sk8" )  echo "SELECTED"; ?> VALUE="sk8">SK8
-            <OPTION <? if($_POST['sub_class'] == "bike" ) echo "SELECTED"; ?> VALUE="bike">Bike
-            <OPTION <? if($_POST['sub_class'] == "snb" )  echo "SELECTED"; ?> VALUE="snb">SNB
+            <OPTION <?php  if($_POST['sub_class'] == "sk8" )  echo "SELECTED"; ?> VALUE="sk8">SK8
+            <OPTION <?php  if($_POST['sub_class'] == "bike" ) echo "SELECTED"; ?> VALUE="bike">Bike
+            <OPTION <?php  if($_POST['sub_class'] == "snb" )  echo "SELECTED"; ?> VALUE="snb">SNB
            </OPTGROUP>
            <OPTGROUP LABEL="Parties">
-            <OPTION <? if($_POST['sub_class'] == "hip-hop_fest" )      echo "SELECTED"; ?> VALUE="hip-hop_fest">Hip-Hop Fest
-            <OPTION <? if($_POST['sub_class'] == "dasemolina-theend" ) echo "SELECTED"; ?> VALUE="dasemolina-theend">Da Semolina End
-            <OPTION <? if($_POST['sub_class'] == "dasemolinaxi" )      echo "SELECTED"; ?> VALUE="dasemolinaxi">Da Semolinaxi
-            <OPTION <? if($_POST['sub_class'] == "hip-hopsummit1" )    echo "SELECTED"; ?> VALUE="hip-hopsummit1">Hip-Hop Summit 1
-            <OPTION <? if($_POST['sub_class'] == "hip-hopsummit3" )    echo "SELECTED"; ?> VALUE="hip-hopsummit3">Hip-Hop Summit 3
-            <OPTION <? if($_POST['sub_class'] == "jamza" )             echo "SELECTED"; ?> VALUE="jamza">Jam ZA
-            <OPTION <? if($_POST['sub_class'] == "martin" )            echo "SELECTED"; ?> VALUE="martin">Martin
-            <OPTION <? if($_POST['sub_class'] == "notakdavaj3" )       echo "SELECTED"; ?> VALUE="notakdavaj3">No Tak Davaj 3
-            <OPTION <? if($_POST['sub_class'] == "ca2" )               echo "SELECTED"; ?> VALUE="ca2">CA uderground 2
-            <OPTION <? if($_POST['sub_class'] == "ca4" )               echo "SELECTED"; ?> VALUE="ca4">CA uderground 4
+            <OPTION <?php  if($_POST['sub_class'] == "hip-hop_fest" )      echo "SELECTED"; ?> VALUE="hip-hop_fest">Hip-Hop Fest
+            <OPTION <?php  if($_POST['sub_class'] == "dasemolina-theend" ) echo "SELECTED"; ?> VALUE="dasemolina-theend">Da Semolina End
+            <OPTION <?php  if($_POST['sub_class'] == "dasemolinaxi" )      echo "SELECTED"; ?> VALUE="dasemolinaxi">Da Semolinaxi
+            <OPTION <?php  if($_POST['sub_class'] == "hip-hopsummit1" )    echo "SELECTED"; ?> VALUE="hip-hopsummit1">Hip-Hop Summit 1
+            <OPTION <?php  if($_POST['sub_class'] == "hip-hopsummit3" )    echo "SELECTED"; ?> VALUE="hip-hopsummit3">Hip-Hop Summit 3
+            <OPTION <?php  if($_POST['sub_class'] == "jamza" )             echo "SELECTED"; ?> VALUE="jamza">Jam ZA
+            <OPTION <?php  if($_POST['sub_class'] == "martin" )            echo "SELECTED"; ?> VALUE="martin">Martin
+            <OPTION <?php  if($_POST['sub_class'] == "notakdavaj3" )       echo "SELECTED"; ?> VALUE="notakdavaj3">No Tak Davaj 3
+            <OPTION <?php  if($_POST['sub_class'] == "ca2" )               echo "SELECTED"; ?> VALUE="ca2">CA uderground 2
+            <OPTION <?php  if($_POST['sub_class'] == "ca4" )               echo "SELECTED"; ?> VALUE="ca4">CA uderground 4
            </OPTGROUP>
            <OPTGROUP LABEL="Haluze">
-            <OPTION <? if($_POST['sub_class'] == "haluze" ) echo "SELECTED"; ?> VALUE="haluze">Haluze
+            <OPTION <?php  if($_POST['sub_class'] == "haluze" ) echo "SELECTED"; ?> VALUE="haluze">Haluze
            </OPTGROUP>
            <OPTGROUP LABEL="Kooperacia">
-            <OPTION <? if($_POST['sub_class'] == "xtm" )    echo "SELECTED"; ?> VALUE="xtm">XTM crew
+            <OPTION <?php  if($_POST['sub_class'] == "xtm" )    echo "SELECTED"; ?> VALUE="xtm">XTM crew
            </OPTGROUP>
           </SELECT>
          </TD>
         </TR>
-        <TR ALIGN="center"><TD>MENO OBRAZKU:<BR><INPUT TYPE="text" NAME="author" SIZE="35" MAXLENGTH="128" VALUE="<? echo $_POST['author']; ?>"></TD></TR>
-        <TR ALIGN="center"><TD>DATUM (DD-MM-RRRR):<BR><INPUT TYPE="text" NAME="date" SIZE="35" MAXLENGTH="64" VALUE="<? echo $_POST['date']; ?>"></TD></TR>
-        <TR ALIGN="center"><TD>POPIS OBRAZKU:<BR><TEXTAREA NAME="description" COLS="31" ROWS="5"><? echo $_POST['description']; ?></TEXTAREA></TD></TR>
-        <INPUT TYPE="hidden" NAME="id" VALUE="<? echo $id; ?>">
+        <TR ALIGN="center"><TD>MENO OBRAZKU:<BR><INPUT TYPE="text" NAME="author" SIZE="35" MAXLENGTH="128" VALUE="<?php  echo $_POST['author']; ?>"></TD></TR>
+        <TR ALIGN="center"><TD>DATUM (DD-MM-RRRR):<BR><INPUT TYPE="text" NAME="date" SIZE="35" MAXLENGTH="64" VALUE="<?php  echo $_POST['date']; ?>"></TD></TR>
+        <TR ALIGN="center"><TD>POPIS OBRAZKU:<BR><TEXTAREA NAME="description" COLS="31" ROWS="5"><?php  echo $_POST['description']; ?></TEXTAREA></TD></TR>
+        <INPUT TYPE="hidden" NAME="id" VALUE="<?php  echo $id; ?>">
         <TR ALIGN="center"><TD><INPUT TYPE="submit" VALUE="Vlozit obrazok"></TD></TR>
        </TABLE>
       </CENTER>
      </FORM>
-    <?
+    <?php 
   }
   
 
@@ -148,14 +148,14 @@
     function sendBack(){
       ?>
        <FORM ACTION="admin_pictures_update.php?x=2" METHOD="post">
-        <INPUT TYPE="hidden" NAME="sub_class"    VALUE="<? echo toSingleAp($_POST['sub_class']);   ?>">
-        <INPUT TYPE="hidden" NAME="author"       VALUE="<? echo toSingleAp($_POST['author']);      ?>">
-        <INPUT TYPE="hidden" NAME="date"         VALUE="<? echo toSingleAp($_POST['date']);        ?>">
-        <INPUT TYPE="hidden" NAME="description"  VALUE="<? echo toSingleAp($_POST['description']); ?>">
-        <INPUT TYPE="hidden" NAME="id"           VALUE="<? echo toSingleAp($_POST['id']); ?>">
+        <INPUT TYPE="hidden" NAME="sub_class"    VALUE="<?php  echo toSingleAp($_POST['sub_class']);   ?>">
+        <INPUT TYPE="hidden" NAME="author"       VALUE="<?php  echo toSingleAp($_POST['author']);      ?>">
+        <INPUT TYPE="hidden" NAME="date"         VALUE="<?php  echo toSingleAp($_POST['date']);        ?>">
+        <INPUT TYPE="hidden" NAME="description"  VALUE="<?php  echo toSingleAp($_POST['description']); ?>">
+        <INPUT TYPE="hidden" NAME="id"           VALUE="<?php  echo toSingleAp($_POST['id']); ?>">
         <INPUT TYPE="submit" VALUE="Naspet">
        </FORM>
-      <?
+      <?php 
     }
     
     if (! $_POST['sub_class'] ){
@@ -259,7 +259,7 @@
 
    <TD ALIGN="center"><BR><DIV CLASS="cursor" ONCLICK="window.close();"><B><CENTER>ZATVOR OKNO</CENTER></B></DIV></TD></TR>
   </TABLE>
-<?
+<?php 
 // -------------------------------------------------------------------------- //
   } else { echo "Na tuto stranku nemate opravneny pristup"; }
 // -------------------------------------------------------------------------- //

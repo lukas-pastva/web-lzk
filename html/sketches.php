@@ -1,4 +1,4 @@
-<?
+<?php
   function f ($x){
   ?>
       
@@ -8,7 +8,7 @@
      <H3>Fotky Sketches. Admin nevie kto je autorom tychto fotografii a ani nechce nabadat k podobnej cinnosti.</H3>
      <BR>
 
-     <? 
+     <?php 
        //*****************************//
          $sub_class = "sketches";
             $odkaz = "12";
@@ -17,7 +17,7 @@
      ?>
 
     </DIV>
-    <?
+    <?php
     }
 
 ?>

@@ -1,4 +1,4 @@
-<?
+<?php
   session_register('meno_uzivatela');
   session_register('stav');
   include_once ("definitions.php");
@@ -17,7 +17,7 @@
  </HEAD>
 <BODY>
 <CENTER>
-<?
+<?php
 // -------------------------------------------------------------------------- //
   if ( ( $_SESSION['typ_uzivatela'] == "admin" ) || ( $_SESSION['typ_uzivatela'] == "moderator" )  ) {
 // -------------------------------------------------------------------------- //
@@ -36,11 +36,11 @@
     ?>
       <CENTER>
       <BR><BR>SKUTOCNE CHCETE ODSTRANIT ZAZNAM?<BR><BR>
-      <SPAN CLASS="cursor" ONCLICK="window.open('admin_delete_from_db.php?x=<? echo $tabulka; ?>&amp;y=<? echo $stlpec; ?>&amp;z=<? echo $hodnota; ?>&amp;hard=1', '', 'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=300,height=320,left=10,titlebar=1'); window.close();"><B>ANO</B></SPAN>
+      <SPAN CLASS="cursor" ONCLICK="window.open('admin_delete_from_db.php?x=<?php echo $tabulka; ?>&amp;y=<?php echo $stlpec; ?>&amp;z=<?php echo $hodnota; ?>&amp;hard=1', '', 'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=300,height=320,left=10,titlebar=1'); window.close();"><B>ANO</B></SPAN>
       &nbsp;&nbsp;&nbsp;
       <SPAN CLASS="cursor" ONCLICK="window.close();"><B>NIE</B></SPAN>
       </CENTER>
-    <?    
+    <?php    
     }
 
     //f-cia, ktora vymaze z databazy s menom tabulky, menom co vymazat

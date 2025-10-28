@@ -1,4 +1,4 @@
-<?
+<?php 
   function f ($x){
   ?>
       
@@ -9,7 +9,7 @@
       Semoliny boli súèasou Hip-Hopovej kultúry v iline u od zaèiatku a raz to muselo skonèi. Smutné je ale to, e tım ako skonèila DaSemolina skonèila aj ve¾ká èas Hip-Hoppového publika a Hip-Hop sa stáva módnou záleitosou a nie zmyslom zivota pohodovıch ludí. Kopa malıch detí, ktoré vobec nevedia wo co gou, pretvárky, pózy a komercia to je bohuial obraz terajšej kultúry. Semolina Rest In Peace.
       AD, Lyrik H, Vec, SeStra, DizGrafix, respect.</P> 
 
-     <? 
+     <?php  
        //*****************************//
          $sub_class = "dasemolina-theend";
             $odkaz = "42";
@@ -18,7 +18,7 @@
      ?>
 
     </DIV>
-    <?
+    <?php 
     }
 
 ?>

@@ -1,5 +1,5 @@
 <DIV CLASS="stranka">
-<? function f($dir){}; ?>
+<?php function f($dir){}; ?>
 
 <H1> HIP - HOP </H1>
 
@@ -25,4 +25,3 @@
 
 
 </DIV>
-

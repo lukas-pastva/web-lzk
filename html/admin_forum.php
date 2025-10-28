@@ -5,27 +5,27 @@
     if (! $limit) { $limit = ADMIN_FORUM_POCET_ZOBRAZOVANYCH; }
       ?>
       <DIV CLASS="stranka">
-       <H3>Admin_forum</H3>
-      <?
+      <H3>Admin_forum</H3>
+      <?php
     // -------------------------------------------------------------------------- //
     if ( ( $_SESSION['typ_uzivatela'] == "admin" ) || ( $_SESSION['typ_uzivatela'] == "moderator" )  ) {
     // -------------------------------------------------------------------------- //
 
       ?>
        <HR>
-       <DIV CLASS="cursor" ONCLICK="window.open('admin_forum_insert.php?x=1', '_blank', 'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=<? echo ADMIN_FORUM_INSERT_W; ?>,height=<? echo ADMIN_FORUM_INSERT_H; ?>,left=10,titlebar=1');"><B>DOPLNIT SPRAVU</B></DIV>
+       <DIV CLASS="cursor" ONCLICK="window.open('admin_forum_insert.php?x=1', '_blank', 'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=<?php echo ADMIN_FORUM_INSERT_W; ?>,height=<?php echo ADMIN_FORUM_INSERT_H; ?>,left=10,titlebar=1');"><B>DOPLNIT SPRAVU</B></DIV>
        <HR>
-      <?
+      <?php
 
 
       $all_text=mysql_query("SELECT * FROM forum ORDER BY id DESC");
     
       //Vypis zoznamov stranok
       ?>
-       <DIV CLASS="admin_msg">
-        <DIV CLASS="clanok_autor">
-         <CENTER>
-      <?
+        <DIV CLASS="admin_msg">
+         <DIV CLASS="clanok_autor">
+          <CENTER>
+      <?php
       for ($x = ADMIN_FORUM_POCET_ZOBRAZOVANYCH; ($x-ADMIN_FORUM_POCET_ZOBRAZOVANYCH) < mysql_affected_rows($link); $x+=ADMIN_FORUM_POCET_ZOBRAZOVANYCH){
         $nr+=1;
         if ( $limit != $x ){
@@ -35,11 +35,11 @@
         }
       }
       ?>
-         </CENTER>
-        </DIV>
-       </DIV>
-       <BR>
-      <?
+           </CENTER>
+          </DIV>
+         </DIV>
+         <BR>
+      <?php
     
       for ($i = 0; $i < $limit; $i++){
         if ($sprava = mysql_fetch_array($all_text)){
@@ -60,7 +60,7 @@
     } else { echo "Na tuto stranku nemate opravneny pristup"; }
     // -------------------------------------------------------------------------- //
     ?>
-     </DIV>
-    <?
+    </DIV>
+    <?php
   }
 ?>

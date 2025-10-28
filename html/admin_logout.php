@@ -1,7 +1,7 @@
 <DIV CLASS="stranka">
 <CENTER>
 
-<?
+<?php
   function f($dir){}
   
   $logged_out = session_destroy();      

@@ -1,4 +1,4 @@
-<?
+<?php
   function f ($x){
   ?>
       
@@ -8,7 +8,7 @@
       <P>RIDERS: Typek ,Pastwos, Wifon, Martin, Milan, Pether</P>
 	    <BR>
 
-     <? 
+     <?php 
        //*****************************//
          $sub_class = "bike";
             $odkaz = "22";
@@ -17,7 +17,7 @@
      ?>
 
     </DIV>
-    <?
+    <?php
     }
 
 ?>

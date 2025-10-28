@@ -13,18 +13,18 @@
       <DIV CLASS="stranka">
        <H3>Admin_clanky</H3>
        <HR>
-       <DIV CLASS="cursor" ONCLICK="window.open('admin_clanky_insert.php?x=1', '_blank', 'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=<? echo ADMIN_CLANKY_INSERT_W; ?>,height=<? echo ADMIN_CLANKY_INSERT_H; ?>,left=10,titlebar=1');"><B>DOPLNIT CLANOK</B></DIV>
+       <DIV CLASS="cursor" ONCLICK="window.open('admin_clanky_insert.php?x=1', '_blank', 'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=<?php echo ADMIN_CLANKY_INSERT_W; ?>,height=<?php echo ADMIN_CLANKY_INSERT_H; ?>,left=10,titlebar=1');"><B>DOPLNIT CLANOK</B></DIV>
        <HR>
-      <?
+      <?php
 
       $all_text=mysql_query("SELECT * FROM clanky ORDER BY id DESC");
 
       //Vypis zoznamov stranok
       ?>
-       <DIV CLASS="admin_msg">
-        <DIV CLASS="clanok_autor">
-         <CENTER>
-      <?
+         <DIV CLASS="admin_msg">
+          <DIV CLASS="clanok_autor">
+           <CENTER>
+      <?php
       for ($x = ADMIN_CLANKY_POCET_ZOBRAZOVANYCH; ($x-ADMIN_CLANKY_POCET_ZOBRAZOVANYCH) < mysql_affected_rows($link); $x+=ADMIN_CLANKY_POCET_ZOBRAZOVANYCH){
         $nr+=1;
         if ( $limit != $x ){
@@ -34,11 +34,11 @@
         }
       }
       ?>
-         </CENTER>
-        </DIV>
-       </DIV>
-       <BR>
-      <?
+           </CENTER>
+          </DIV>
+         </DIV>
+         <BR>
+      <?php
 
       
       for ($i = 0; $i < $limit; $i++){
@@ -53,7 +53,7 @@
           $handle = fopen($obr, "w");
           if(! fwrite($handle, $sprava['pic'] ) ){echo "Chyba tvorby obrazka!";}
           fclose($handle);
-          ?><IMG SRC="<? echo $obr;?>" ALT="&nbsp;&nbsp;&nbsp;LZK" BORDER="0" WIDTH="70" HEIGHT="70"><BR><?
+          ?><IMG SRC="<?php echo $obr;?>" ALT="&nbsp;&nbsp;&nbsp;LZK" BORDER="0" WIDTH="70" HEIGHT="70"><BR><?php
         
           //echo "\r\n\t<B>ID: </B>".$sprava["id"]."</B><BR>";
           echo "\r\n\t<B>datum: </B>".date('d.m.Y', ($sprava['date']))."</B><BR>";
@@ -80,7 +80,7 @@
       }
       ?>
       </DIV>
-      <?    
+      <?php    
     // -------------------------------------------------------------------------- //
     } else { echo "Na tuto stranku nemate opravneny pristup"; }
     // -------------------------------------------------------------------------- //

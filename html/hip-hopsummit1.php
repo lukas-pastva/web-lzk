@@ -1,4 +1,4 @@
-<?
+<?php
   function f ($x){
   ?>
       
@@ -7,7 +7,7 @@
       <H2>Hip-Hop Summit 1</H2>
       <P>Hip-Hop Summit 1</P>
 
-     <? 
+     <?php 
        //*****************************//
          $sub_class = "hip-hopsummit1";
             $odkaz = "45";
@@ -16,7 +16,7 @@
      ?>
 
     </DIV>
-    <?
+    <?php
     }
 
 ?>

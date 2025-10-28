@@ -4,10 +4,10 @@
     include_once("definitions.php");
     if (! $limit) { $limit = COUNTER_POCET_ZOBRAZOVANYCH; }
     ?>
-     <DIV CLASS="stranka">
+    <DIV CLASS="stranka">
       <H3>Admin_pocitadlo</H3>
       <HR>
-    <?
+    <?php
     // -------------------------------------------------------------------------- //
     if ( ( $_SESSION['typ_uzivatela'] == "admin" ) || ( $_SESSION['typ_uzivatela'] == "moderator" )  ) {
     // -------------------------------------------------------------------------- //  
@@ -19,7 +19,7 @@
          <DIV CLASS="admin_msg">
           <DIV CLASS="clanok_autor">
            <CENTER>
-        <?
+        <?php
         for ($x = COUNTER_POCET_ZOBRAZOVANYCH; ($x-COUNTER_POCET_ZOBRAZOVANYCH) < mysql_affected_rows($link); $x+=COUNTER_POCET_ZOBRAZOVANYCH){
           $nr+=1;
           if ( $limit != $x ){
@@ -33,7 +33,7 @@
           </DIV>
          </DIV>
          <BR>
-        <?
+        <?php
         
         for ($i = 0; $i < $limit; $i++){
           if ($counter_array = mysql_fetch_array($counter)){
@@ -51,6 +51,6 @@
     // -------------------------------------------------------------------------- //  
     ?>
      </DIV>
-    <?
+    <?php
   }
 ?>

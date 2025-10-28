@@ -1,4 +1,4 @@
-<?
+<?php
   session_register('meno_uzivatela');
   session_register('stav');
   include_once("definitions.php");
@@ -16,7 +16,7 @@
   <TITLE>Upravit obrazok v clanku</TITLE>
  </HEAD>
 <BODY>
-<?
+<?php
 
 // -------------------------------------------------------------------------- //  
   if ( ( $_SESSION['typ_uzivatela'] == "admin" ) || ( $_SESSION['typ_uzivatela'] == "moderator" )  ) {
@@ -35,11 +35,11 @@
     <CENTER><P><B>ZMENIT OBRAZOK</B></P><BR>
     <FORM ACTION="admin_clanky_update_image.php?x=2" ENCTYPE="multipart/form-data" METHOD="post">
       <INPUT type="file" name="pic">
-      <INPUT type="hidden" value="<? echo $id; ?>" name="id">
+      <INPUT type="hidden" value="<?php echo $id; ?>" name="id">
       <INPUT type="submit" value="Odoslat">
     </FORM>
     <CENTER>
-    <?
+    <?php
   
   } else if ( $x == "2" ){
   
@@ -88,7 +88,7 @@
   }
 ?>
    <BR><DIV CLASS="cursor" ONCLICK="window.close();"><B><CENTER>ZATVOR OKNO</CENTER></B></DIV>
-<?
+<?php
 
 // -------------------------------------------------------------------------- //
   } else { echo "Na tuto stranku nemate opravneny pristup"; }

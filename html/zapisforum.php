@@ -7,14 +7,14 @@
 			<B>Nick:</B><BR> <INPUT TYPE="text" NAME="nick" ID="nick" SIZE="26"
 				MAXLENGTH="20"><BR> <B>.:Text Spravy:.</B><BR>
 			<TEXTAREA NAME="text" cols="45" ROWS="10"></TEXTAREA>
-     <? //<FORM ACTION="site.php?x=31" METHOD="post"><INPUT TYPE="hidden" NAME="prepni" VALUE="prepni"><INPUT TYPE="submit" VALUE="Spat na forum"></FORM> ?>
+     <?php //<FORM ACTION="site.php?x=31" METHOD="post"><INPUT TYPE="hidden" NAME="prepni" VALUE="prepni"><INPUT TYPE="submit" VALUE="Spat na forum"></FORM> ?>
      <INPUT TYPE="submit"
 				VALUE="         --->    Odoslat     <---         ">
 		</FIELDSET>
 	</FORM>
 
   
-<?
+<?php
 
 function f($dir)
 {}
@@ -45,7 +45,7 @@ if ($text != null) {
 }
 ?>
 
-<?
+<?php
 $prepni = $_POST["prepni"];
 $prepni = strip_tags($prepni, '');
 
@@ -55,4 +55,3 @@ if ($prepni == "prepni") {
 ?>
 
 </DIV>
-

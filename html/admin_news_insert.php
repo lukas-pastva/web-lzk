@@ -1,4 +1,4 @@
-<?
+<?php 
   session_register('meno_uzivatela');
   session_register('stav');
   include_once("definitions.php");
@@ -16,7 +16,7 @@
   <TITLE>VLOZIT DO NEWS:</TITLE>
  </HEAD>
 <BODY>
-<?
+<?php 
 
 // -------------------------------------------------------------------------- //  
   if ( ( $_SESSION['typ_uzivatela'] == "admin" ) || ( $_SESSION['typ_uzivatela'] == "moderator" )  ) {
@@ -34,7 +34,7 @@
    <INPUT TYPE="submit" VALUE="Vloz spravu">
  </FORM>
 </CENTER>
-<?
+<?php 
   }
   
   $text = $_POST["text"];

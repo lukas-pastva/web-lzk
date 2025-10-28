@@ -1,4 +1,4 @@
-<?
+<?php
   function f ($x){
   ?>
       
@@ -8,7 +8,7 @@
 	    <P>Takze tie prve, moj jumpik, big air, asi 15m a tie dalsie Vychylovka centrum, pohodicka, krasne pocasie, co treba viac?</P><BR>
 	    <BR>
 
-     <? 
+     <?php 
        //*****************************//
          $sub_class = "snb";
             $odkaz = "23";
@@ -17,7 +17,7 @@
      ?>
 
     </DIV>
-    <?
+    <?php
     }
 
 ?>

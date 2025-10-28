@@ -15,7 +15,7 @@ include_once("definitions.php");
 
   gtag('config', 'G-Y7Z7E75XXP');
 </script>
- <?//?>
+ <?php//?>
    <STYLE TYPE="text/css">
     body {background-color: #B2B2B2;
           background-image: url("pics/site/bkgrnd.png");
@@ -121,7 +121,7 @@ $x = $_GET["x"];
     
 <DIV CLASS="menu">
         
-  <DIV CLASS="menu_1" ONCLICK="window.open('site.php?x=0&limit=<? echo CLANKY_POCET_ZOBRAZOVANYCH; ?>','_self');" ONMOUSEOVER="vis(sub_1, sub_2, sub_3, 0, 0, 0);">
+  <DIV CLASS="menu_1" ONCLICK="window.open('site.php?x=0&limit=<?php echo CLANKY_POCET_ZOBRAZOVANYCH; ?>','_self');" ONMOUSEOVER="vis(sub_1, sub_2, sub_3, 0, 0, 0);">
     <IMG BORDER="0" SRC="pics/menu/main/mainshit_norm.png" ONMOUSEOVER="this.src=menu_1_sel.src;" ONMOUSEOUT="this.src=menu_1_norm.src;" ALT="">
   </DIV>
 
@@ -222,7 +222,7 @@ require($hodn1.".php");
   
   ?>
 <DIV CLASS="admin">
-  <?  
+  <?php  
     require("admin.php");
   ?>
   

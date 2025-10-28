@@ -1,5 +1,5 @@
 <DIV CLASS="stranka">
-<? function f($dir){}; ?>
+<?php function f($dir){}; ?>
 
 <H1> EX - SPORTS </H1>
 

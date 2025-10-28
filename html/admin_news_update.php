@@ -1,4 +1,4 @@
-<?
+<?php 
   session_register('meno_uzivatela');
   session_register('stav');
   include_once ("definitions.php");
@@ -17,7 +17,7 @@
  </HEAD>
 <BODY>
 
-<?
+<?php 
 
 // -------------------------------------------------------------------------- //  
   if ( ( $_SESSION['typ_uzivatela'] == "admin" ) || ( $_SESSION['typ_uzivatela'] == "moderator" )  ) {
@@ -36,15 +36,15 @@
 </CENTER>
 <CENTER>
  <FORM ACTION="admin_news_update.php" METHOD="post">
-   <INPUT TYPE="hidden" NAME="nr" VALUE="<? echo $updatovany_text['nr']; ?>">
-   DATUM:<BR><INPUT TYPE="text" NAME="time" ID="time" VALUE="<? echo $updatovany_text['time']; ?>"><BR>&nbsp;<BR>
-   TEXT:<BR><TEXTAREA NAME="text" COLS="20" ROWS="8"><? echo $updatovany_text['text']; ?></TEXTAREA><BR>&nbsp;<BR>
+   <INPUT TYPE="hidden" NAME="nr" VALUE="<?php  echo $updatovany_text['nr']; ?>">
+   DATUM:<BR><INPUT TYPE="text" NAME="time" ID="time" VALUE="<?php  echo $updatovany_text['time']; ?>"><BR>&nbsp;<BR>
+   TEXT:<BR><TEXTAREA NAME="text" COLS="20" ROWS="8"><?php  echo $updatovany_text['text']; ?></TEXTAREA><BR>&nbsp;<BR>
    <INPUT TYPE="submit" VALUE="Uprav spravu">
  </FORM>
  <BR><DIV CLASS="cursor" ONCLICK="window.close();"><B>ZATVORIT OKNO</B></DIV>
 </CENTER>
 
-<?
+<?php 
    }
    $nr = $_POST["nr"];
    $nr = strip_tags($nr,'');

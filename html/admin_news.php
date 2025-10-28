@@ -1,4 +1,4 @@
-<?
+<?php
   function f($limit){
   
     include_once("definitions.php");
@@ -7,15 +7,15 @@
     <DIV CLASS="stranka">
      <H3>Admin_bleskovky</H3>
      <HR>
-    <?  
+    <?php  
     // -------------------------------------------------------------------------- //  
       if ( ( $_SESSION['typ_uzivatela'] == "admin" ) || ( $_SESSION['typ_uzivatela'] == "moderator" )  ) {
     // -------------------------------------------------------------------------- //
 
       ?>
-       <DIV CLASS="cursor" ONCLICK="window.open('admin_news_insert.php?x=1', '_blank', 'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=<? echo ADMIN_NEWS_INSERT_W; ?>,height=<? echo ADMIN_NEWS_INSERT_H; ?>,left=10,titlebar=1');"><B>DOPLNIT SPRAVU</B></DIV>
+       <DIV CLASS="cursor" ONCLICK="window.open('admin_news_insert.php?x=1', '_blank', 'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=<?php echo ADMIN_NEWS_INSERT_W; ?>,height=<?php echo ADMIN_NEWS_INSERT_H; ?>,left=10,titlebar=1');"><B>DOPLNIT SPRAVU</B></DIV>
        <HR><HR>
-      <?
+      <?php
 
       $all_text=mysql_query("SELECT * FROM news ORDER BY nr DESC");
       
@@ -38,7 +38,7 @@
         </DIV>
        </DIV>
        <BR>
-      <?
+      <?php
       
       for ($i = 0; $i < $limit; $i++){
         if ($sprava = mysql_fetch_array($all_text)){
@@ -57,7 +57,7 @@
       } else { echo "Na tuto stranku nemate opravneny pristup"; }
     // -------------------------------------------------------------------------- //
     ?>
-     </DIV>
-    <?
+    </DIV>
+    <?php
   }
 ?>

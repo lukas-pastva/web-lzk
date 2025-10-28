@@ -14,36 +14,36 @@
           ?>
           <DIV CLASS="clanok">
            <DIV CLASS="clanok_date">
-            <? echo date('d.m.Y', ($sprava['date']))."\n" ?>
+            <?php echo date('d.m.Y', ($sprava['date']))."\n" ?>
            </DIV>
            <DIV CLASS="clanok_nadpis">
-            <A HREF="site.php?x=1&id=<? echo $sprava['id']; ?>" TARGET="_self"><? echo $sprava['nadpis']."\n" ?></A>
+            <A HREF="site.php?x=1&id=<?php echo $sprava['id']; ?>" TARGET="_self"><?php echo $sprava['nadpis']."\n" ?></A>
            </DIV>
            <DIV CLASS="clanok_text">
-            <? echo $sprava['text_small']."\n" ?>
+            <?php echo $sprava['text_small']."\n" ?>
            </DIV>
            <DIV CLASS="clanok_autor">
-            <? echo "Precitane: <B>".$sprava['precitane']."</B>&nbsp;&nbsp;&nbsp;" ?>
-            <? echo $sprava['autor']."\n" ?>
+            <?php echo "Precitane: <B>".$sprava['precitane']."</B>&nbsp;&nbsp;&nbsp;" ?>
+            <?php echo $sprava['autor']."\n" ?>
            </DIV>
            <DIV CLASS="clanok_pic">
-            <?
+            <?php
              $obr = "/tmp/obr".$sprava['id'].".tmp";
              $handle = fopen($obr, "w");
              if(! fwrite($handle, $sprava['pic'] ) ){echo "Chyba tvorby obrazka!";}
              fclose($handle);
             ?>
-            <A HREF="site.php?x=1&id=<? echo $sprava['id']; ?>"><IMG SRC="<? echo $obr;?>" ALT="&nbsp;&nbsp;&nbsp;LZK" BORDER="0"></A><BR>
+            <A HREF="site.php?x=1&id=<?php echo $sprava['id']; ?>"><IMG SRC="<?php echo $obr;?>" ALT="&nbsp;&nbsp;&nbsp;LZK" BORDER="0"></A><BR>
            </DIV>
           </DIV>
           <BR>
-          <?
+          <?php
           //**************************************
               
     }
 
     ?>
     </DIV>
-    <?
+    <?php
   }
 ?>

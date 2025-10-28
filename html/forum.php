@@ -1,4 +1,4 @@
-<DIV CLASS="forum forum--fullscreen">
+<DIV CLASS="forum">
   <DIV CLASS="forum_head">
     <A HREF="site.php?x=31"><B><SPAN CLASS="med">Reaguj!!!</SPAN></B></A>
   </DIV>

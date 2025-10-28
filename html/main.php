@@ -28,12 +28,19 @@
            </DIV>
            <DIV CLASS="clanok_pic">
             <?php
-             $obr = "/tmp/obr".$sprava['id'].".tmp";
-             $handle = fopen($obr, "w");
-             if(! fwrite($handle, $sprava['pic'] ) ){echo "Chyba tvorby obrazka!";}
-             fclose($handle);
+             // Write article image into web-accessible tmp directory
+             $obr = "tmp/obr".$sprava['id'].".tmp";
+             $handle = @fopen($obr, "wb");
+             if ($handle === false) {
+               echo "Chyba tvorby obrazka!";
+             } else {
+               if (fwrite($handle, $sprava['pic']) === false) {
+                 echo "Chyba tvorby obrazka!";
+               }
+               fclose($handle);
+             }
             ?>
-            <A HREF="site.php?x=1&id=<?php echo $sprava['id']; ?>"><IMG SRC="<?php echo $obr;?>" ALT="&nbsp;&nbsp;&nbsp;LZK" BORDER="0"></A><BR>
+            <A HREF="site.php?x=1&id=<?php echo $sprava['id']; ?>"><IMG SRC="<?php echo $obr; ?>" ALT="&nbsp;&nbsp;&nbsp;LZK" BORDER="0"></A><BR>
            </DIV>
           </DIV>
           <BR>

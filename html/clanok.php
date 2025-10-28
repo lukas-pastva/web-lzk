@@ -21,13 +21,17 @@
 		</DIV>
 		<DIV CLASS="clanok_pic">
 		<?php
-		$obr = "/tmp/obr".$sprava['id'].".tmp";
+		$obr = "tmp/obr".$sprava['id'].".tmp";
 
-		$handle = fopen($obr, "w");
-		if(! fwrite($handle, $sprava['pic'] ) ){echo "Chyba tvorby obrazka!";}
-		fclose($handle);
+		$handle = @fopen($obr, "wb");
+		if ($handle === false) {
+			echo "Chyba tvorby obrazka!";
+		} else {
+			if (fwrite($handle, $sprava['pic']) === false) { echo "Chyba tvorby obrazka!"; }
+			fclose($handle);
+		}
 		?>
-			<IMG SRC="tmp/<?php echo "obr".$sprava['id'].".tmp";?>" ALT="&nbsp;&nbsp;&nbsp;LZK" BORDER="0"><BR>
+			<IMG SRC="<?php echo $obr; ?>" ALT="&nbsp;&nbsp;&nbsp;LZK" BORDER="0"><BR>
 		</DIV>
 	</DIV>
 	<BR>

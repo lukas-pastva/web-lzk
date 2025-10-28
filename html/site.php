@@ -30,7 +30,7 @@ include_once("definitions.php");
   <LINK REL="shortcut icon" HREF="pics/site/favicon.gif">
   <TITLE>-->Ludia Z Konca<--</TITLE>
  </HEAD>
-<BODY>
+ <BODY<?php if ($hodn1 == "forum") echo ' CLASS="forum-fullscreen"'; ?>>
 <DIV CLASS="sajtah">
 
 <DIV CLASS="head">

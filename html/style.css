@@ -530,13 +530,7 @@ body.forum-fullscreen::-webkit-scrollbar {
   height: calc(100vh - 48px);
   margin: 0;
   border-width: 0;
-  overflow: hidden;
-  /* Hide scrollbars for various engines if any overflow occurs */
-  -ms-overflow-style: none;     /* IE and Edge */
-  scrollbar-width: none;        /* Firefox */
-}
-.forum--fullscreen .forum_text::-webkit-scrollbar {
-  display: none;                /* Chrome, Safari */
+  overflow: auto;
 }
 /******************************************************************************/
 .zapisForum    {

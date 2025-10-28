@@ -15,7 +15,7 @@ include_once("definitions.php");
 
   gtag('config', 'G-Y7Z7E75XXP');
 </script>
- <?php//?>
+ 
    <STYLE TYPE="text/css">
     body {background-color: #B2B2B2;
           background-image: url("pics/site/bkgrnd.png");

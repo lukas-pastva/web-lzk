@@ -49,11 +49,13 @@
           echo "\r\n\t<DIV CLASS=\"admin_msg\">";
           echo "\r\n\t<DIV CLASS=\"admin_msg_napis\">".$sprava["nadpis"]."</DIV><BR>";
         
-          $obr = "./tmp/obr".$sprava['id'].".tmp";
-          $handle = fopen($obr, "w");
-          if(! fwrite($handle, $sprava['pic'] ) ){echo "Chyba tvorby obrazka!";}
-          fclose($handle);
-          ?><IMG SRC="<?php echo $obr;?>" ALT="&nbsp;&nbsp;&nbsp;LZK" BORDER="0" WIDTH="70" HEIGHT="70"><BR><?php
+          $webPath = 'tmp/obr' . $sprava['id'] . '.tmp';
+          $diskPath = __DIR__ . '/' . $webPath;
+          $dirPath = dirname($diskPath);
+          if (!is_dir($dirPath)) { @mkdir($dirPath, 0775, true); }
+          $writeOk = @file_put_contents($diskPath, $sprava['pic'], LOCK_EX);
+          if ($writeOk === false && !file_exists($diskPath)) { echo "Chyba tvorby obrazka!"; }
+          ?><IMG SRC="<?php echo $webPath;?>" ALT="&nbsp;&nbsp;&nbsp;LZK" BORDER="0" WIDTH="70" HEIGHT="70"><BR><?php
         
           //echo "\r\n\t<B>ID: </B>".$sprava["id"]."</B><BR>";
           echo "\r\n\t<B>datum: </B>".date('d.m.Y', ($sprava['date']))."</B><BR>";

@@ -21,17 +21,19 @@
 		</DIV>
 		<DIV CLASS="clanok_pic">
 		<?php
-		$obr = "tmp/obr".$sprava['id'].".tmp";
-
-		$handle = @fopen($obr, "wb");
-		if ($handle === false) {
-			echo "Chyba tvorby obrazka!";
-		} else {
-			if (fwrite($handle, $sprava['pic']) === false) { echo "Chyba tvorby obrazka!"; }
-			fclose($handle);
+		// Write article image into web-accessible tmp directory (robustly)
+		$webPath = 'tmp/obr' . $sprava['id'] . '.tmp';
+		$diskPath = __DIR__ . '/' . $webPath;
+		$dirPath = dirname($diskPath);
+		if (!is_dir($dirPath)) {
+		    @mkdir($dirPath, 0775, true);
+		}
+		$writeOk = @file_put_contents($diskPath, $sprava['pic'], LOCK_EX);
+		if ($writeOk === false && !file_exists($diskPath)) {
+		    echo "Chyba tvorby obrazka!";
 		}
 		?>
-			<IMG SRC="<?php echo $obr; ?>" ALT="&nbsp;&nbsp;&nbsp;LZK" BORDER="0"><BR>
+			<IMG SRC="<?php echo $webPath; ?>" ALT="&nbsp;&nbsp;&nbsp;LZK" BORDER="0"><BR>
 		</DIV>
 	</DIV>
 	<BR>

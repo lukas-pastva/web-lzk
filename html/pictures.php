@@ -22,7 +22,7 @@
           <BR>
           <?php
           
-          $vyberAll = psw_mysql_query("SELECT * FROM pictures WHERE sub_class = '".$sub_class."' ORDER BY author ASC");
+          $vyberAll = psw_mysql_query("SELECT * FROM pictures WHERE sub_class = '".mysql_real_escape_string($sub_class)."' ORDER BY author ASC");
           
           if ($vyberAll->num_rows > 0) {
               while($vyber = $vyberAll->fetch_assoc()) {
@@ -66,7 +66,7 @@
           <BR>
           <?php
           
-          $vyberAll = psw_mysql_query("SELECT * FROM pictures WHERE sub_class = '".$sub_class."' ORDER BY author DESC");
+          $vyberAll = psw_mysql_query("SELECT * FROM pictures WHERE sub_class = '".mysql_real_escape_string($sub_class)."' ORDER BY author DESC");
           
           if ($vyberAll->num_rows > 0) {
               while($vyber = $vyberAll->fetch_assoc()) {
@@ -109,7 +109,7 @@
           </DIV>
           <BR>
           <?php
-          $vyberAll = psw_mysql_query("SELECT * FROM pictures WHERE sub_class = '".$sub_class."' ORDER BY author DESC");
+          $vyberAll = psw_mysql_query("SELECT * FROM pictures WHERE sub_class = '".mysql_real_escape_string($sub_class)."' ORDER BY author DESC");
           
           if ($vyberAll->num_rows > 0) {
               while($vyber = $vyberAll->fetch_assoc()) {
@@ -153,7 +153,7 @@
           </DIV>
           <BR>
           <?php
-          $vyberAll = psw_mysql_query("SELECT * FROM pictures WHERE sub_class = '".$sub_class."' ORDER BY author DESC");
+          $vyberAll = psw_mysql_query("SELECT * FROM pictures WHERE sub_class = '".mysql_real_escape_string($sub_class)."' ORDER BY author DESC");
           
           if ($vyberAll->num_rows > 0) {
               while($vyber = $vyberAll->fetch_assoc()) {
@@ -196,7 +196,7 @@
           </DIV>
           <BR>
           <?php
-          $vyberAll = psw_mysql_query("SELECT * FROM pictures WHERE sub_class = '".$sub_class."' ORDER BY author DESC");
+          $vyberAll = psw_mysql_query("SELECT * FROM pictures WHERE sub_class = '".mysql_real_escape_string($sub_class)."' ORDER BY author DESC");
           
           if ($vyberAll->num_rows > 0) {
               while($vyber = $vyberAll->fetch_assoc()) {

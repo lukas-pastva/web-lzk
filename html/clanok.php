@@ -1,6 +1,6 @@
 <?php function f($x){
 
-	$all_text = psw_mysql_query('select * from clanky where id = "'.$_REQUEST['id'].'"');
+	$all_text = psw_mysql_query('select * from clanky where id = "'.intval($_REQUEST['id']).'"');
 
 	if ($all_text->num_rows > 0) {
 		while($sprava = $all_text->fetch_assoc()) {

@@ -103,7 +103,7 @@ function counterWrite()
     $ip = $_SERVER["REMOTE_ADDR"];
     $timeLogIn = time();
 
-    $vlozenie = psw_mysql_query("insert into counter (time, ip) values (" . $timeLogIn . ", '" . $ip . "')");
+    $vlozenie = psw_mysql_query("insert into counter (time, ip) values (" . intval($timeLogIn) . ", '" . mysql_real_escape_string($ip) . "')");
     if ($vlozenie !== true) {
         echo "Chyba! : " . mysql_error();
     }
@@ -161,7 +161,7 @@ function isvaliddate($date)
         settype($YYYY, "integer");
 
         if (is_int($DD) && is_int($MM) && is_int($YYYY) && ($pom1 == "-") && ($pom2 == "-")) {
-            if (($DD <= '31') && ($DD >= '1') && ($MM <= '12') && ($MM >= '1') && ($YYYY <= '2020') && ($YYYY >= '1951')) {
+            if (($DD <= '31') && ($DD >= '1') && ($MM <= '12') && ($MM >= '1') && ($YYYY <= '2099') && ($YYYY >= '1951')) {
                 return true;
             } else {
                 return false;

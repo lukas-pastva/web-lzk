@@ -37,38 +37,38 @@ include_once("definitions.php");
 </DIV>
 <?php
 
-$x = $_GET["x"];
+$x = isset($_GET["x"]) ? $_GET["x"] : null;
 
-       if ($x == 0 ) {$hodn1 = "main";               $hodn2=$_GET['limit'];}
-  else if ($x == 1)  {$hodn1 = "clanok";             $hodn2=$_GET["id"];}
-  else if ($x == 2)  {$hodn1 = "xtm";                $hodn2=$_POST["order_by"];}
+       if ($x == 0 ) {$hodn1 = "main";               $hodn2=isset($_GET['limit']) ? $_GET['limit'] : '';}
+  else if ($x == 1)  {$hodn1 = "clanok";             $hodn2=isset($_GET["id"]) ? $_GET["id"] : '';}
+  else if ($x == 2)  {$hodn1 = "xtm";                $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
   else if ($x == 10) {$hodn1 = "hip-hop";            $hodn2="";}
-  else if ($x == 11) {$hodn1 = "write";              $hodn2=$_POST["order_by"];}
-  else if ($x == 12) {$hodn1 = "sketches";           $hodn2=$_POST["order_by"];}
-  else if ($x == 13) {$hodn1 = "stickers";           $hodn2=$_POST["order_by"];}
+  else if ($x == 11) {$hodn1 = "write";              $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
+  else if ($x == 12) {$hodn1 = "sketches";           $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
+  else if ($x == 13) {$hodn1 = "stickers";           $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
   else if ($x == 20) {$hodn1 = "ex-sports";          $hodn2="";}
-  else if ($x == 21) {$hodn1 = "sk8";                $hodn2=$_POST["order_by"];}
-  else if ($x == 22) {$hodn1 = "bike";               $hodn2=$_POST["order_by"];}
-  else if ($x == 23) {$hodn1 = "snb";                $hodn2=$_POST["order_by"];}
+  else if ($x == 21) {$hodn1 = "sk8";                $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
+  else if ($x == 22) {$hodn1 = "bike";               $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
+  else if ($x == 23) {$hodn1 = "snb";                $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
   else if ($x == 30) {$hodn1 = "forum";              $hodn2="";}
   else if ($x == 31) {$hodn1 = "zapisforum";         $hodn2="";}
-  else if ($x == 41) {$hodn1 = "dasemolinaxi";       $hodn2=$_POST["order_by"];}
-  else if ($x == 42) {$hodn1 = "dasemolina-theend";  $hodn2=$_POST["order_by"];}
-  else if ($x == 43) {$hodn1 = "martin";             $hodn2=$_POST["order_by"];}
-  else if ($x == 44) {$hodn1 = "jamza";              $hodn2=$_POST["order_by"];}
-  else if ($x == 45) {$hodn1 = "hip-hopsummit1";     $hodn2=$_POST["order_by"];}
-  else if ($x == 46) {$hodn1 = "hip-hopsummit3";     $hodn2=$_POST["order_by"];}
-  else if ($x == 47) {$hodn1 = "notakdavaj3";        $hodn2=$_POST["order_by"];}
-  else if ($x == 48) {$hodn1 = "ca2";                $hodn2=$_POST["order_by"];}
-  else if ($x == 49) {$hodn1 = "hip-hop_fest";       $hodn2=$_POST["order_by"];}
-  else if ($x == 50) {$hodn1 = "ca4";                $hodn2=$_POST["order_by"];}
-  else if ($x == 60) {$hodn1 = "haluze";             $hodn2=$_POST["order_by"];}  
+  else if ($x == 41) {$hodn1 = "dasemolinaxi";       $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
+  else if ($x == 42) {$hodn1 = "dasemolina-theend";  $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
+  else if ($x == 43) {$hodn1 = "martin";             $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
+  else if ($x == 44) {$hodn1 = "jamza";              $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
+  else if ($x == 45) {$hodn1 = "hip-hopsummit1";     $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
+  else if ($x == 46) {$hodn1 = "hip-hopsummit3";     $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
+  else if ($x == 47) {$hodn1 = "notakdavaj3";        $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
+  else if ($x == 48) {$hodn1 = "ca2";                $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
+  else if ($x == 49) {$hodn1 = "hip-hop_fest";       $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
+  else if ($x == 50) {$hodn1 = "ca4";                $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
+  else if ($x == 60) {$hodn1 = "haluze";             $hodn2=isset($_POST["order_by"]) ? $_POST["order_by"] : '';}
   else if ($x == 89) {$hodn1 = "admin_user_counter"; $hodn2="";}
-  else if ($x == 90) {$hodn1 = "admin_clanky";       $hodn2=$_GET['limit'];}
-  else if ($x == 91) {$hodn1 = "admin_forum";        $hodn2=$_GET['limit'];}
-  else if ($x == 92) {$hodn1 = "admin_counter";      $hodn2=$_GET['limit'];}
-  else if ($x == 93) {$hodn1 = "admin_news";         $hodn2=$_GET['limit'];}
-  else if ($x == 94) {$hodn1 = "admin_pictures";     $hodn2=$_POST["sub_class"];}
+  else if ($x == 90) {$hodn1 = "admin_clanky";       $hodn2=isset($_GET['limit']) ? $_GET['limit'] : '';}
+  else if ($x == 91) {$hodn1 = "admin_forum";        $hodn2=isset($_GET['limit']) ? $_GET['limit'] : '';}
+  else if ($x == 92) {$hodn1 = "admin_counter";      $hodn2=isset($_GET['limit']) ? $_GET['limit'] : '';}
+  else if ($x == 93) {$hodn1 = "admin_news";         $hodn2=isset($_GET['limit']) ? $_GET['limit'] : '';}
+  else if ($x == 94) {$hodn1 = "admin_pictures";     $hodn2=isset($_POST["sub_class"]) ? $_POST["sub_class"] : '';}
   else if ($x == 98) {$hodn1 = "admin_logout";       $hodn2="";}
   else if ($x == 99) {$hodn1 = "admin_login";        $hodn2="";}
   else               {$hodn1 = "main";               $hodn2=""; }

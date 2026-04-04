@@ -19,11 +19,11 @@
 function f($dir)
 {}
 
-$nick = $_POST["nick"];
+$nick = isset($_POST["nick"]) ? $_POST["nick"] : '';
 $nick = strip_tags($nick, '<b><u><i>');
 // $nick = chunk_split($nick, 18, "\r\n");
 
-$text = $_POST["text"];
+$text = isset($_POST["text"]) ? $_POST["text"] : '';
 $text = strip_tags($text, '<b><u><i>');
 
 $ip = $_SERVER["REMOTE_ADDR"];
@@ -36,7 +36,7 @@ function zapisForum($time, $nick, $text, $ip)
     // $text = chunk_split($text, 85, "\r\n");
     include_once("definitions.php");
 
-    $vlozenie = psw_mysql_query("insert into forum (time, nick, text, ip) values (" . $time . ",'" . $nick . "', '" . $text . "', '" . $ip . "')");
+    $vlozenie = psw_mysql_query("insert into forum (time, nick, text, ip) values (" . intval($time) . ",'" . mysql_real_escape_string($nick) . "', '" . mysql_real_escape_string($text) . "', '" . mysql_real_escape_string($ip) . "')");
     header("Location: site.php?x=30");
 }
 
@@ -46,7 +46,7 @@ if ($text != null) {
 ?>
 
 <?php
-$prepni = $_POST["prepni"];
+$prepni = isset($_POST["prepni"]) ? $_POST["prepni"] : '';
 $prepni = strip_tags($prepni, '');
 
 if ($prepni == "prepni") {

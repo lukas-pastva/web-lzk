@@ -18,7 +18,7 @@ DB:
 <?php
 
 include_once ("definitions.php");
-$connId = mysqli_connect(SQL_HOST, SQL_USERNAME, SQL_PASSWORD, SQL_DBNAME);
+$connId = mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 mysql_query("DROP TABLE news");
 mysql_query("DROP TABLE forum");

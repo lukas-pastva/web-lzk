@@ -1,6 +1,6 @@
 <?php
 // -------------------------------------------------------------------------- //  
-    if ( $_SESSION['typ_uzivatela'] == "admin" ) {
+    if ( isset($_SESSION['typ_uzivatela']) && $_SESSION['typ_uzivatela'] == "admin" ) {
 // -------------------------------------------------------------------------- //
    include_once("definitions.php");
 ?>
@@ -20,7 +20,7 @@
   }
   
 // -------------------------------------------------------------------------- //  
-    if ( $_SESSION['typ_uzivatela'] == "moderator" ) {
+    if ( isset($_SESSION['typ_uzivatela']) && $_SESSION['typ_uzivatela'] == "moderator" ) {
 // -------------------------------------------------------------------------- //
 ?>
 

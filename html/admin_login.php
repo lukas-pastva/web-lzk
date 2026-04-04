@@ -3,10 +3,10 @@
 <?php 
   function f($dir){}
   
-  $nick = $_POST["nick"];
+  $nick = isset($_POST["nick"]) ? $_POST["nick"] : '';
   $nick = strip_tags($nick,'');
 
-  $pass = $_POST["pass"];
+  $pass = isset($_POST["pass"]) ? $_POST["pass"] : '';
   $pass = strip_tags($pass,'');
 
   function login($nick, $pass){
@@ -14,7 +14,7 @@
     $nick = strtolower($nick);
     $pass = strtolower($pass);
     
-    $vybratie = mysql_query("SELECT * FROM users WHERE nick='".$nick."'");
+    $vybratie = mysql_query("SELECT * FROM users WHERE nick='".mysql_real_escape_string($nick)."'");
     $vybratie_pole = mysql_fetch_array($vybratie);
 
     if( $pass == $vybratie_pole['pass'] ){
@@ -30,7 +30,7 @@
       session_register('typ_uzivatela');
       $_SESSION['meno_uzivatela'] = $nick;
       $_SESSION['typ_uzivatela'] = "admin";
-      echo "<BR>Vitaj ".$user." si prihlaseny na tejto sajte ako administrator!!!<BR>&nbsp;<BR>\r\n";
+      echo "<BR>Vitaj ".htmlspecialchars($nick)." si prihlaseny na tejto sajte ako administrator!!!<BR>&nbsp;<BR>\r\n";
     }
     
     else if ( $user_type == "moderator" ){
@@ -43,7 +43,7 @@
     }
     
     else {
-      echo $nick." zadal si nespravne heslo, alebo nick, alebo oboje :)<BR>MENO:".$nick."<BR>HESLO:".$pass."<BR>&nbsp;<BR>\r\n";
+      echo htmlspecialchars($nick)." zadal si nespravne heslo, alebo nick, alebo oboje :)<BR>&nbsp;<BR>\r\n";
       echo "<A HREF=\"site.php\"><B>KLIKNI SEM PRE NAVRAT</B></A><BR>&nbsp;<BR>\r\n";
     }
 

@@ -17,11 +17,11 @@
 			if ($all_text->num_rows > 0) {
 				while($sprava = $all_text->fetch_assoc()) {
 					  echo "\r\n\t<DIV CLASS=\"forum_msg\">";
-			             echo "<SPAN CLASS=\"med\">".$sprava["nick"]."</SPAN> ";
+			             echo "<SPAN CLASS=\"med\">".htmlspecialchars($sprava["nick"])."</SPAN> ";
 			             
 			             echo "<FONT COLOR=\"#E6E6E6\">".date('j.n.Y G:i:s', ($sprava['time']))."</FONT><BR>";
 			             
-			             echo "\r\n\t".$sprava["text"];
+			             echo "\r\n\t".htmlspecialchars($sprava["text"]);
 			             echo "\r\n\t<HR>\r\n\t</DIV>\r\n";
 			             
 			             $pocet_sprav++;
@@ -30,7 +30,7 @@
 			
 
              echo "\r\n\t<B>Koniec fora</B>";
-             while ($i < 68) {echo "&nbsp;"; $i++;}
+             $i = 0; while ($i < 68) {echo "&nbsp;"; $i++;}
              echo "<B><A HREF=\"#back\" TITLE=\"Skok na zaciatok.\"><SPAN CLASS=\"small\">Na zaciatok fora</SPAN></A></B><BR>\r\n";
              echo "\r\n\t<FONT COLOR=\"white\">".$pocet_sprav."</FONT>";
            }

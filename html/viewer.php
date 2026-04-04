@@ -15,10 +15,11 @@ body {
 
 
   <?php
-$sub_class = $_GET["sub_class"];
-$order_by = $_GET["order_by"];
-$id = $_GET["id"];
+$sub_class = isset($_GET["sub_class"]) ? $_GET["sub_class"] : '';
+$order_by = isset($_GET["order_by"]) ? $_GET["order_by"] : '';
+$id = isset($_GET["id"]) ? intval($_GET["id"]) : 0;
 
+$order = "date DESC";
 if ($order_by == 1) {
     $order = "author ASC";
 }
@@ -39,15 +40,15 @@ include_once ("definitions.php");
   <TABLE ALIGN="center" BORDER="1">
    <?php
 
-$all_text = psw_mysql_query("SELECT * FROM pictures WHERE id = '" . $id . "' ");
+$all_text = psw_mysql_query("SELECT * FROM pictures WHERE id = '" . intval($id) . "' ");
 
 if ($all_text->num_rows > 0) {
     while ($vytiahnutie = $all_text->fetch_assoc()) {
 
         ?>
    <TR>
-			<TD ALIGN="center"><B><?php echo $vytiahnutie["author"];  ?></B><BR>
-     <?php echo $vytiahnutie["description"];  ?>
+			<TD ALIGN="center"><B><?php echo htmlspecialchars($vytiahnutie["author"]);  ?></B><BR>
+     <?php echo htmlspecialchars($vytiahnutie["description"]);  ?>
     </TD>
 		</TR>
 		<TR>
@@ -62,8 +63,10 @@ if ($all_text->num_rows > 0) {
     }
 }
 
-$all_text = psw_mysql_query("SELECT * FROM pictures WHERE sub_class = '" . $sub_class . "' ORDER BY " . $order . " ");
+$all_text = psw_mysql_query("SELECT * FROM pictures WHERE sub_class = '" . mysql_real_escape_string($sub_class) . "' ORDER BY " . $order . " ");
 
+$i = 0;
+$pole = array();
 if ($all_text->num_rows > 0) {
     while ($vyber = $all_text->fetch_assoc()) {
 
@@ -88,7 +91,7 @@ if ($all_text->num_rows > 0) {
     <?php
 
     $previous = null;
-    $actual;
+    $actual = 0;
     $next = null;
 
     for ($j = 0; $j < count($pole); $j ++) {

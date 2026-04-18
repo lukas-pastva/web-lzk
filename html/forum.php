@@ -14,7 +14,7 @@
            $pocet_sprav=0;
            $all_text = psw_mysql_query("select nick, text, time from forum order by id desc");
 
-			if ($all_text->num_rows > 0) {
+			if ($all_text && $all_text->num_rows > 0) {
 				while($sprava = $all_text->fetch_assoc()) {
 					  echo "\r\n\t<DIV CLASS=\"forum_msg\">";
 			             echo "<SPAN CLASS=\"med\">".htmlspecialchars($sprava["nick"])."</SPAN> ";

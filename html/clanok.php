@@ -1,8 +1,9 @@
 <?php function f($x){
 
-	$all_text = psw_mysql_query('select * from clanky where id = "'.intval($_REQUEST['id']).'"');
+	$id = isset($_REQUEST['id']) ? intval($_REQUEST['id']) : 0;
+	$all_text = psw_mysql_query('select * from clanky where id = "'.$id.'"');
 
-	if ($all_text->num_rows > 0) {
+	if ($all_text && $all_text->num_rows > 0) {
 		while($sprava = $all_text->fetch_assoc()) {
 			?>
 <DIV CLASS="stranka">

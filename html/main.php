@@ -8,6 +8,7 @@
     include_once ("definitions.php");
     $all_text=psw_mysql_query("SELECT * FROM clanky ORDER BY id DESC");
     $rows = 0;
+	if ($all_text && $all_text->num_rows > 0)
 	while($sprava = $all_text->fetch_assoc()) {
             $rows++;
           //***********************************

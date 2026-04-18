@@ -91,6 +91,7 @@ if (!function_exists('session_register')) {
 */
 function psw_mysql_query($sql, $debug = true){
 	global $connId;
+	if (!$connId) { return false; }
 	return $connId->query($sql);
 }
 /**
@@ -100,6 +101,8 @@ function psw_mysql_query($sql, $debug = true){
 // Funkcia, ktora prida navstevnika stranky do databazy aj s jeho ip a casom navstevy.
 function counterWrite()
 {
+    global $connId;
+    if (!$connId) { return; }
     $ip = $_SERVER["REMOTE_ADDR"];
     $timeLogIn = time();
 
@@ -117,6 +120,7 @@ function counterWrite()
 function counterRead()
 {
     $vyberAll = psw_mysql_query("select count(*) as pocet from counter");
+    if (!$vyberAll) { echo "0"; return; }
     $vyber = $vyberAll->fetch_assoc();
 
     $vyber = $vyber["pocet"];
@@ -133,7 +137,7 @@ function vypisNews()
 {
     $vyberAll = psw_mysql_query("select time, text from news order by nr desc");
 
-    if ($vyberAll->num_rows > 0) {
+    if ($vyberAll && $vyberAll->num_rows > 0) {
         while ($vyber = $vyberAll->fetch_assoc()) {
 
             echo "\t<HR><B>" . $vyber['time'] . "</B><BR>&nbsp;<BR>\r\n";

@@ -135,7 +135,9 @@ function counterRead()
 // F-cia, ktora vypise z databazy spravy, news. :)
 function vypisNews()
 {
-    $vyberAll = psw_mysql_query("select time, text from news order by nr desc");
+    global $connId;
+    if (!$connId) { echo "<!-- DB connection failed -->"; return; }
+    $vyberAll = psw_mysql_query("select `time`, `text` from `news` order by `nr` desc");
 
     if ($vyberAll && $vyberAll->num_rows > 0) {
         while ($vyber = $vyberAll->fetch_assoc()) {

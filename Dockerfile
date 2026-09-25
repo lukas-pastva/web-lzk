@@ -1,26 +1,12 @@
-FROM php:8.0-apache
+# php:8.0-apache (Debian bullseye) uz nema apt repozitare (404), preto 8.3 na bookworme. Legacy mysql_* volania riesia shimy vo functions.php.
+FROM php:8.3-apache
 
 RUN a2enmod rewrite && \
     apt-get update -y && \
-	apt-get install -y --no-install-recommends \
-	apt-transport-https \
-	libgd-dev  \
-    libfreetype6-dev  \
-    libjpeg62-turbo-dev  \
-    libpng-dev  \
-    libzip-dev \
-    sendmail \
-    zip && \
-	rm -rf /var/lib/apt/lists/*
-
-RUN docker-php-ext-install mysqli gd zip && \
-	docker-php-ext-configure gd
-
-# Pear mail
-RUN curl -s -o /tmp/go-pear.phar http://pear.php.net/go-pear.phar && \
-    echo '/usr/bin/php /tmp/go-pear.phar "$@"' > /usr/bin/pear && \
-    chmod +x /usr/bin/pear && \
-    pear install mail Net_SMTP
+    apt-get install -y --no-install-recommends libfreetype6-dev libjpeg62-turbo-dev libpng-dev libzip-dev && \
+    rm -rf /var/lib/apt/lists/* && \
+    docker-php-ext-configure gd --with-freetype --with-jpeg && \
+    docker-php-ext-install -j"$(nproc)" mysqli gd zip
 
 USER www-data
 

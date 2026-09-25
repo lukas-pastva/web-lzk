@@ -767,3 +767,6 @@ body.forum-fullscreen::-webkit-scrollbar {
 .glightbox-clean .gslide-desc { color: #ccc; font-size: 12px; }
 .glightbox-clean .gdesc-inner { padding: 10px 14px; }
 @media (max-width: 767px) { .glightbox-clean .gslide-description { position: absolute; left: 0; right: 0; bottom: 0; } }
+/* fotka v lightboxe nereaguje na klik/tap (ziadne prepinanie popisu ani zatvaranie) - ovlada sa len sipkami, swipe a X */
+.glightbox-container .gslide-media, .glightbox-container .gslide-image, .glightbox-container .gslide-image img { pointer-events: none !important; }
+.glightbox-container .gslide-description { pointer-events: none; }

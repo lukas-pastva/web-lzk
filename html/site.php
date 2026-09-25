@@ -27,10 +27,10 @@ include_once("definitions.php");
    <SCRIPT src="script.js" type=text/javascript></SCRIPT>
   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
   <META NAME="viewport" CONTENT="width=860">
-  <LINK REL="stylesheet" TYPE="text/css" HREF="style.css?v=4">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="style.css?v=5">
   <LINK REL="stylesheet" TYPE="text/css" HREF="vendor/glightbox/glightbox.min.css">
   <SCRIPT src="vendor/glightbox/glightbox.min.js" defer></SCRIPT>
-  <SCRIPT>document.addEventListener("DOMContentLoaded",function(){if(window.GLightbox){GLightbox({selector:".glightbox",touchNavigation:true,loop:true,zoomable:true,moreLength:0});}});</SCRIPT>
+  <SCRIPT>document.addEventListener("DOMContentLoaded",function(){if(window.GLightbox){GLightbox({selector:".glightbox",touchNavigation:true,loop:true,zoomable:false,draggable:true,closeOnOutsideClick:false,moreLength:0});}});</SCRIPT>
   <LINK REL="shortcut icon" HREF="pics/site/favicon.gif">
   <TITLE>-->Ludia Z Konca<--</TITLE>
  </HEAD>

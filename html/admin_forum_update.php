@@ -11,7 +11,7 @@
          }
    </STYLE>
   <LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
-  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
   <TITLE>UPDATOVAT FORUM:</TITLE>
  </HEAD>
 <BODY>
@@ -78,7 +78,7 @@
      $done = mysql_query("update forum set nick = '".$nick."' , text = '".$text."', ip = '".$ip."' where id ='".$id."' ");
      if (!$done) { echo "error". mysql_error(); } else {
       echo "\r\n\t<CENTER>";
-      echo "\r\n\t<BR><BR>Správa bola uspesne upravena.<BR>&nbsp;<BR>";
+      echo "\r\n\t<BR><BR>SprĂˇva bola uspesne upravena.<BR>&nbsp;<BR>";
 
       echo "\r\n\t</CENTER>";
      }

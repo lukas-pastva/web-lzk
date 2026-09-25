@@ -10,7 +10,7 @@
          }
    </STYLE>
   <LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
-  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
   <TITLE>W.E.N.O. C.R.E.W.</TITLE>
  </HEAD>
 <BODY>

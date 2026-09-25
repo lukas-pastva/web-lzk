@@ -20,19 +20,19 @@
         <B>Narodil som sa:</B><BR>
         9.2.osemdesiatosem<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
-        <B>JazdÌm od:</B><BR>
+        <B>Jazd√≠m od:</B><BR>
         Asi take dva roky.....rok pasivne a teraz som to aktivoval takze aktivne<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
-        <B>MÙj bike:</B><BR>
-        r·m: Nakamura, rajdy: Nakamura<BR>
+        <B>M√¥j bike:</B><BR>
+        r√°m: Nakamura, rajdy: Nakamura<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
         <B>Sponzori:</B><BR>
         Zatim nic ale v prvom rade tatko.<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
-        <B>Miesta, kde jazdÌm:</B><BR>
+        <B>Miesta, kde jazd√≠m:</B><BR>
         Ihriska v OSC, CA a secky rovne plochy!<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
-        <B>Motiv·cia:</B><BR>
+        <B>Motiv√°cia:</B><BR>
         je<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
         <B>Best trik:</B><BR>
@@ -44,13 +44,13 @@
         <B>Best video:</B><BR>
         braun_flatground_pro_qualifiers_from_global-flat<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
-        <B>InÈ zaluby okrem BMX:</B><BR>
+        <B>In√© zaluby okrem BMX:</B><BR>
         Tak cez zimu jazdim na doske.Haluze s kamosmi. Samozrejme moja priatelka Evka!!!<BR>
   	    <DIV CLASS="tiny">&nbsp;</DIV>
-        <B>Hudba, ktor˙ poc˙vam:</B><BR>
+        <B>Hudba, ktor√∫ poc√∫vam:</B><BR>
         Vaccsinou je to Sk produkcia rapu<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
-        <B>Obl˙benÈ web str·nky:</B><BR>
+        <B>Obl√∫ben√© web str√°nky:</B><BR>
         www.pokec.sk<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
         <B>Heslo dna / Motto:</B><BR>
@@ -69,42 +69,42 @@
        </DIV>
        <DIV CLASS="clanok_text">
         <B>Mesto:</B><BR>
-        Cadca respektÌwe Oscadnica,XTM reprezent ;)<BR>
+        Cadca respekt√≠we Oscadnica,XTM reprezent ;)<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
         <B>Narodil som sa:</B><BR>
         1985<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
-        <B>JazdÌm od:</B><BR>
-        Tak to m·me vöetci eöte v cerstwej pamati! Kaûdopadne sa to d· pocÌtat na dni cca 3 mesiace :D<BR>
+        <B>Jazd√≠m od:</B><BR>
+        Tak to m√°me v≈°etci e≈°te v cerstwej pamati! Ka≈ædopadne sa to d√° poc√≠tat na dni cca 3 mesiace :D<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
-        <B>MÙj bike:</B><BR>
-        r·m: Titus BMX myslÌm ûe od KHE, rajdy: KHE Matt Hofman<BR>
+        <B>M√¥j bike:</B><BR>
+        r√°m: Titus BMX mysl√≠m ≈æe od KHE, rajdy: KHE Matt Hofman<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
         <B>Sponzori:</B><BR>
         Co dom dal!<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
-        <B>Miesta, kde jazdÌm:</B><BR>
-        Wacöinou ihrisk· a inÈ volnÈ priestranstv·<BR>
+        <B>Miesta, kde jazd√≠m:</B><BR>
+        Wac≈°inou ihrisk√° a in√© voln√© priestranstv√°<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
-        <B>Motiv·cia:</B><BR>
-        Ak xceö nieco dosiahnut tak musÌö proste makat :D<BR>
+        <B>Motiv√°cia:</B><BR>
+        Ak xce≈° nieco dosiahnut tak mus√≠≈° proste makat :D<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
         <B>Best trik:</B><BR>
         Momentalne jednoznacne DECADE rescetp ;)<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
         <B>Best biker:</B><BR>
-        Samozrejme n·ö admin Lukash aka pSw (ma talent xalanisko a je do toho bl·zon), Brad Sims, no a v neposlednom rade JA a Martin kolega z crew :D<BR> 
+        Samozrejme n√°≈° admin Lukash aka pSw (ma talent xalanisko a je do toho bl√°zon), Brad Sims, no a v neposlednom rade JA a Martin kolega z crew :D<BR> 
         <DIV CLASS="tiny">&nbsp;</DIV>
         <B>Best video:</B><BR>
         braun_flatground_pro_final_from_global-flat<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
-        <B>InÈ z·luby okrem BMX:</B><BR>
+        <B>In√© z√°luby okrem BMX:</B><BR>
         Sem tam si nieco nakreslim najdu sa aj ine haluze<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
-        <B>Hudba, ktor˙ poc˙vam:</B><BR>
-        Hip-Hop, Reggae, SKA a öecko dobrÈ co sa d· poc˙vat<BR>
+        <B>Hudba, ktor√∫ poc√∫vam:</B><BR>
+        Hip-Hop, Reggae, SKA a ≈°ecko dobr√© co sa d√° poc√∫vat<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
-        <B>Obl˙benÈ web str·nky:</B><BR>
+        <B>Obl√∫ben√© web str√°nky:</B><BR>
         Samozrejme www.lzk.6x.to<BR>
         <DIV CLASS="tiny">&nbsp;</DIV>
         <B>Heslo dna / Motto:</B><BR>

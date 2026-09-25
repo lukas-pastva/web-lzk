@@ -12,7 +12,7 @@
          }
    </STYLE>
   <LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
-  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
   <TITLE>UPRAVIT BLESKOVKU</TITLE>
  </HEAD>
 <BODY>
@@ -63,7 +63,7 @@
      $done = mysql_query("update news set time = '".$time."' , text = '".$text."' where nr ='".$nr."' ");
      if (!$done) { echo "error". mysql_error(); } else {
       echo "<CENTER>";
-      echo "<BR><BR>Správa bola uspesne upravena.<BR>&nbsp;<BR>\r\n";
+      echo "<BR><BR>SprĂˇva bola uspesne upravena.<BR>&nbsp;<BR>\r\n";
       echo "<DIV CLASS=\"cursor\" ONCLICK=\"window.close();\"><B><CENTER>ZATVOR OKNO</CENTER></B></DIV>";
       echo "</CENTER>";
      }

@@ -13,6 +13,7 @@ define("DB_USERNAME", $_ENV['MYSQL_USER'] ?? getenv('MYSQL_USER'));
 define("DB_PASSWORD", $_ENV['MYSQL_PASSWORD'] ?? getenv('MYSQL_PASSWORD'));
 
 $connId = @mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+if ($connId) { mysqli_set_charset($connId, 'utf8mb4'); }
 // Provide a compatible $link handle for legacy calls
 $link = $connId;
 

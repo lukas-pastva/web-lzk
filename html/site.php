@@ -25,8 +25,12 @@ include_once("definitions.php");
          }
    </STYLE>
    <SCRIPT src="script.js" type=text/javascript></SCRIPT>
-  <LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
-  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+  <META NAME="viewport" CONTENT="width=860">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="style.css?v=2">
+  <LINK REL="stylesheet" TYPE="text/css" HREF="vendor/glightbox/glightbox.min.css">
+  <SCRIPT src="vendor/glightbox/glightbox.min.js" defer></SCRIPT>
+  <SCRIPT>document.addEventListener("DOMContentLoaded",function(){if(window.GLightbox){GLightbox({selector:".glightbox",touchNavigation:true,loop:true,zoomable:true,moreLength:0});}});</SCRIPT>
   <LINK REL="shortcut icon" HREF="pics/site/favicon.gif">
   <TITLE>-->Ludia Z Konca<--</TITLE>
  </HEAD>

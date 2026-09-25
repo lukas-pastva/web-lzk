@@ -12,7 +12,7 @@
          }
    </STYLE>
   <LINK REL="stylesheet" TYPE="text/css" HREF="style.css">
-  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1250">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
   <TITLE>VLOZIT DO NEWS:</TITLE>
  </HEAD>
 <BODY>
@@ -53,7 +53,7 @@
     if ($vlozenie == true) { 
 
       echo "<CENTER>\r\n";
-      echo "Správa bola uspesne vlozena.<BR>&nbsp;<BR>\r\n";
+      echo "SprĂˇva bola uspesne vlozena.<BR>&nbsp;<BR>\r\n";
       echo "<DIV CLASS=\"cursor\" ONCLICK=\"window.open('admin_news_insert.php?x=1', '_blank', 'toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=".ADMIN_NEWS_INSERT_W.",height=".ADMIN_NEWS_INSERT_H.",left=10,titlebar=1'); window.close();\"><B>Vloz dalsiu spravu<B></DIV><BR>\r\n";
       echo "</CENTER>";
       

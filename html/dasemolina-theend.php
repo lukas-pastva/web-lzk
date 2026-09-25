@@ -6,7 +6,7 @@
     
       <H2>DaSemolina - The End</H2>
       <P>Posledna DaSemolina v historii, Pyppo odchadza do Anglicka, shit. 
-      Semoliny boli súèasou Hip-Hopovej kultúry v iline u od zaèiatku a raz to muselo skonèi. Smutné je ale to, e tım ako skonèila DaSemolina skonèila aj ve¾ká èas Hip-Hoppového publika a Hip-Hop sa stáva módnou záleitosou a nie zmyslom zivota pohodovıch ludí. Kopa malıch detí, ktoré vobec nevedia wo co gou, pretvárky, pózy a komercia to je bohuial obraz terajšej kultúry. Semolina Rest In Peace.
+      Semoliny boli sÃºÄasÅ¥ou Hip-Hopovej kultÃºry v Å½iline uÅ¾ od zaÄiatku a raz to muselo skonÄiÅ¥. SmutnÃ© je ale to, Å¾e tÃ½m ako skonÄila DaSemolina skonÄila aj veÄ¾kÃ¡ ÄasÅ¥ Hip-HoppovÃ©ho publika a Hip-Hop sa stÃ¡va mÃ³dnou zÃ¡leÅ¾itosÅ¥ou a nie zmyslom zivota pohodovÃ½ch ludÃ­. Kopa malÃ½ch detÃ­, ktorÃ© vobec nevedia wo co gou, pretvÃ¡rky, pÃ³zy a komercia to je bohuÅ¾ial obraz terajÅ¡ej kultÃºry. Semolina Rest In Peace.
       AD, Lyrik H, Vec, SeStra, DizGrafix, respect.</P> 
 
      <?php  

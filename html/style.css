@@ -760,3 +760,10 @@ body.forum-fullscreen::-webkit-scrollbar {
 .galeria-popis { display: block; margin-top: 3px; font-size: 11px; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #222; }
 .galeria-prazdna { color: #444; font-style: italic; }
 @media (max-width: 500px) { .galeria { grid-template-columns: repeat(2, 1fr); gap: 6px; } }
+
+/* GLightbox: popis pod fotkou tmavy a priesvitny namiesto bieleho pasu */
+.glightbox-clean .gslide-description { background: rgba(0, 0, 0, .65) !important; color: #fff; }
+.glightbox-clean .gslide-title { color: #fff; font-size: 14px; margin-bottom: 2px; }
+.glightbox-clean .gslide-desc { color: #ccc; font-size: 12px; }
+.glightbox-clean .gdesc-inner { padding: 10px 14px; }
+@media (max-width: 767px) { .glightbox-clean .gslide-description { position: absolute; left: 0; right: 0; bottom: 0; } }

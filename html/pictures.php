@@ -36,8 +36,8 @@ $pocet = $fotky ? $fotky->num_rows : 0;
   <a class="galeria-polozka glightbox" href="<?php echo htmlspecialchars($big, ENT_QUOTES, 'UTF-8'); ?>"
      data-gallery="<?php echo htmlspecialchars((string) $sub_class, ENT_QUOTES, 'UTF-8'); ?>"
      data-title="<?php echo $titulok; ?>" data-description="<?php echo $datum . ' &middot; ' . $i . '/' . $pocet; ?>">
-    <img src="<?php echo htmlspecialchars($small, ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo $autor; ?>" loading="lazy" decoding="async">
-    <span class="galeria-popis"><b><?php echo $autor; ?></b><?php echo $popis !== '' ? '<br>' . $popis : ''; ?></span>
+    <span class="galeria-foto"><img src="<?php echo htmlspecialchars($small, ENT_QUOTES, 'UTF-8'); ?>" alt="<?php echo $autor; ?>" loading="lazy" decoding="async"></span>
+    <span class="galeria-popis" title="<?php echo $titulok; ?>"><?php echo $popis !== '' ? $popis : $autor; ?></span>
   </a>
   <?php endwhile; ?>
 </div>

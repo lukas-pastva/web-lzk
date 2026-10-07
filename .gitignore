@@ -1,1 +1,3 @@
-tmp/
+.DS_Store
+.wrangler/
+node_modules/

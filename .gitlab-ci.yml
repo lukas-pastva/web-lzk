@@ -1,0 +1,16 @@
+# Staticky snapshot webu lzk.tronic.sk na Cloudflare Pages (public/ + functions/_middleware.js pre stare PHP URL).
+# Pages projekt, domenu a DNS spravuje terraform v tronic-sk/kubernetes (terraform.yaml -> pages).
+# CLOUDFLARE_API_TOKEN je CI/CD premenna celej GitLab skupiny tronic-sk.
+stages:
+  - deploy
+
+deploy-pages:
+  stage: deploy
+  image: node:22-alpine
+  variables:
+    CLOUDFLARE_ACCOUNT_ID: "f6c7a500a63153b3e7a2c16afd09140f"
+    PAGES_PROJECT: "web-lzk"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CLOUDFLARE_API_TOKEN'
+  script:
+    - npx --yes wrangler@4 pages deploy public --project-name="$PAGES_PROJECT" --branch=main --commit-dirty=true
